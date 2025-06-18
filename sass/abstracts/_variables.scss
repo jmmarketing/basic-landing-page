@@ -6,7 +6,51 @@ $default-font-size: 1.6rem;
 // ########################
 // ## Spacing Variables ###
 // ########################
+$spacing-0: 0px;
+$spacing-025: 2px;
+$spacing-050: 4px;
+$spacing-075: 6px;
+$spacing-100: 8px;
+$spacing-125: 10px;
+$spacing-150: 12px;
+$spacing-200: 16px;
+$spacing-250: 20px;
+$spacing-300: 24px;
+$spacing-400: 32px;
+$spacing-500: 40px;
+$spacing-600: 48px;
+$spacing-800: 64px;
+$spacing-1000: 80px;
+$spacing-1200: 96px;
+$spacing-1400: 112px;
+$spacing-1600: 128px;
+$spacing-1800: 140px;
+
+// ########################
+// ## Radius Variables ###
+// ########################
+$radius-0: 0px;
+$radious-4: 4px;
+$radious-6: 6px;
+$radious-8: 8px;
+$radious-10: 10px;
+$radious-12: 12px;
+$radious-16: 16px;
+$radious-20: 20px;
+$radious-24: 24px;
+$radious-full: 999px;
 
 // ######################
 // ## Color Variables ###
 // ######################
+$neutral-900: #25293a;
+$neutral-800: #333950;
+$neutral-500: #747b95;
+$neutral-40: #fafafa;
+$neutral-0: #fff;
+
+$blue-500: #5175ff;
+$blue-300: #829cff;
+$blue-100: #e4eaff;
+
+$red-400: #f05b5b;
