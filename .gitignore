@@ -17,6 +17,9 @@ npm-debug.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.parcel-cache/
+.cache
+.prettierignore
 
 # Testing
 /coverage
