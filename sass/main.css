@@ -1,0 +1,73 @@
+/*
+0 - 600px:        Phone
+600 - 900px:      Tablet Portrait
+900 - 1200px:     Tablet Landscape
+[1200 - 1800px]:  Desktop - Where Normal Styles Apply
+1800px + :        Big Desktop
+*/
+/*
+$breakpoint argument choices: 
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px;
+
+
+ORDER [When refactoring for responsiveness]: Base + typography > general layout + grid > page layout > components
+*/
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.heading {
+  font-size: 5.6rem;
+  letter-spacing: 0;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.sub-heading {
+  font-size: 1.8rem;
+  line-height: 150%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.upper-text {
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.label {
+  font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* Default browser font size is 16px. This gives you 10px baseline, making it easier to calculate rems*/
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}/*# sourceMappingURL=main.css.map */

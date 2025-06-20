@@ -1,15 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
 body {
+  font-family: "Kumbh Sans", sans-serif;
   font-size: $default-font-size; //16px;
+  font-weight: 400;
+  line-height: 160%;
 }
 
-.heading-primary {
-  font-size: 7rem; //70px
+.heading {
+  font-size: 5.6rem; //56px
+  letter-spacing: 0;
+  font-weight: 700;
+  line-height: 120%;
+
+  //Tablet Media Query
+  //font-size: 4rem;
 }
 
-.heading-secondary {
-  font-size: 3.5rem; //35px
+.sub-heading {
+  font-size: 1.8rem; //18px
+  line-height: 150%;
 }
 
-.heading-tertiary {
-  font-size: 2.4rem; //24px
+.title {
+  font-size: 2rem; //20px
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.upper-text {
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.label {
+  font-weight: 700;
 }
