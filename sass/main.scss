@@ -10,7 +10,7 @@
 @import "base/base";
 
 //Components
-// ** IMPORT AS NEEDED **
+@import "../src/components/Logo/logo.scss";
 
 //Layouts
 @import "layouts/navigation";
@@ -18,9 +18,8 @@
 @import "layouts/footer";
 
 //Pages
-// ** IMPORT AS NEEDED **
-
-//Themes
+@import "pages/home";
+@import "pages/sign-up"; //Themes
 // ** IMPORT AS NEEDED **
 
 //Vendors
