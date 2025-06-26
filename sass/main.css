@@ -30,11 +30,13 @@ body {
   letter-spacing: 0;
   font-weight: 700;
   line-height: 120%;
+  color: #25293a;
 }
 
 .sub-heading {
   font-size: 1.8rem;
   line-height: 150%;
+  color: #747b95;
 }
 
 .title {
@@ -90,9 +92,26 @@ main {
   background-position: 650px -395px;
 }
 
+.hero {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 540px;
+}
+.hero__image {
+  max-width: 475px;
+  height: auto;
+}
+
 .logo {
   display: block;
   width: 100%;
   max-width: 1100px;
-  border-bottom: 1px solid red;
 }/*# sourceMappingURL=main.css.map */

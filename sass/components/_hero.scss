@@ -1,0 +1,24 @@
+.hero {
+  @include maxWidths;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // gap: $spacing-300;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-300;
+
+    max-width: 540px;
+  }
+
+  &__right {
+  }
+
+  &__image {
+    max-width: 475px;
+    height: auto;
+  }
+}

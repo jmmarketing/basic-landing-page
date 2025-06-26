@@ -13,6 +13,8 @@ body {
   font-weight: 700;
   line-height: 120%;
 
+  color: $neutral-900;
+
   //Tablet Media Query
   //font-size: 4rem;
 }
@@ -20,6 +22,8 @@ body {
 .sub-heading {
   font-size: 1.8rem; //18px
   line-height: 150%;
+
+  color: $neutral-500;
 }
 
 .title {

@@ -10,8 +10,8 @@
 @import "base/base";
 
 //Components
-@import "../src/components/Logo/logo.scss";
-@import "../src/components/Hero/hero.scss";
+@import "components/hero";
+@import "components/logo";
 
 //Layouts
 @import "layouts/navigation";

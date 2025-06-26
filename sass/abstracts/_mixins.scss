@@ -38,3 +38,8 @@ ORDER [When refactoring for responsiveness]: Base + typography > general layout 
   @if $breakpoint == big-desktop {
   }
 }
+
+@mixin maxWidths {
+  width: 100%;
+  max-width: 1100px;
+}
