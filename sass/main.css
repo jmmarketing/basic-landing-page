@@ -108,10 +108,27 @@ main {
 .hero__image {
   max-width: 475px;
   height: auto;
+  transform: translateY(50px);
 }
 
 .logo {
   display: block;
   width: 100%;
   max-width: 1100px;
+}
+
+.button {
+  width: 170px;
+  height: 50px;
+  border-radius: 999px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+  line-height: 160%;
+  border: 0;
+  cursor: pointer;
+}
+.button--blue {
+  background-color: #5175ff;
+  color: #fff;
+  box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.25);
 }/*# sourceMappingURL=main.css.map */
