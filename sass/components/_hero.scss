@@ -11,13 +11,15 @@
     flex-direction: column;
     gap: $spacing-300;
 
-    max-width: 540px;
+    max-width: 49%;
   }
 
   &__right {
+    max-width: 43%;
   }
 
   &__image {
+    width: 100%;
     max-width: 475px;
     height: auto;
 

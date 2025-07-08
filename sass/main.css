@@ -103,9 +103,13 @@ main {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 540px;
+  max-width: 49%;
+}
+.hero__right {
+  max-width: 43%;
 }
 .hero__image {
+  width: 100%;
   max-width: 475px;
   height: auto;
   transform: translateY(50px);
@@ -131,4 +135,12 @@ main {
   background-color: #5175ff;
   color: #fff;
   box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.25);
+}
+.button--blue:hover {
+  background-color: #829cff;
+  box-shadow: none;
+}
+.button--blue:focus {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #5175ff;
+  outline: none;
 }/*# sourceMappingURL=main.css.map */
