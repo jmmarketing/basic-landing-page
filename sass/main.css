@@ -87,14 +87,24 @@ main {
   align-items: center;
   gap: 140px;
   padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+main::after {
+  content: "";
+  position: absolute;
+  width: clamp(666px, 666px + 0.69 * (100vw - 768px), 1134px);
+  height: clamp(666px, 666px + 0.69 * (100vw - 768px), 1134px);
+  right: clamp(-359px, -274px - 0.126 * (100vw - 768px), -274px);
+  top: clamp(-420px, -158px - 0.39 * (100vw - 768px), -158px);
   background-image: url(../assets/home/bg-pattern-header.svg);
-  background-repeat: no-repeat;
-  background-position: 650px -395px;
+  background-size: cover;
+  z-index: -1;
 }
 
 .hero {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1180px;
   padding: 0px 40px;
   display: flex;
   justify-content: space-between;
@@ -118,13 +128,13 @@ main {
 .hero__image {
   width: 100%;
   height: auto;
-  transform: translateY(2vw);
+  transform: translateY(1vw);
 }
 
 .logo {
   display: block;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1180px;
   padding: 0px 40px;
 }
 
