@@ -8,7 +8,7 @@ body {
 }
 
 .heading {
-  font-size: 5.6rem; //56px
+  font-size: clamp(4rem, 5vw, 5.6rem); //56px
   letter-spacing: 0;
   font-weight: 700;
   line-height: 120%;
@@ -20,7 +20,7 @@ body {
 }
 
 .sub-heading {
-  font-size: 1.8rem; //18px
+  font-size: clamp(1.6rem, 1vw, 1.8rem); //18px
   line-height: 150%;
 
   color: $neutral-500;

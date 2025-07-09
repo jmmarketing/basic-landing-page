@@ -26,7 +26,7 @@ body {
 }
 
 .heading {
-  font-size: 5.6rem;
+  font-size: clamp(4rem, 5vw, 5.6rem);
   letter-spacing: 0;
   font-weight: 700;
   line-height: 120%;
@@ -34,7 +34,7 @@ body {
 }
 
 .sub-heading {
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 1vw, 1.8rem);
   line-height: 150%;
   color: #747b95;
 }
@@ -95,6 +95,7 @@ main {
 .hero {
   width: 100%;
   max-width: 1100px;
+  padding: 0px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,22 +104,23 @@ main {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 49%;
+  max-width: 50%;
 }
 .hero__right {
-  max-width: 43%;
+  max-width: 40%;
 }
 .hero__image {
   width: 100%;
   max-width: 475px;
   height: auto;
-  transform: translateY(50px);
+  transform: translateY(clamp(10px, 5vw, 50px));
 }
 
 .logo {
   display: block;
   width: 100%;
   max-width: 1100px;
+  padding: 0px 40px;
 }
 
 .button {

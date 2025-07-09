@@ -43,3 +43,7 @@ ORDER [When refactoring for responsiveness]: Base + typography > general layout 
   width: 100%;
   max-width: 1100px;
 }
+
+@mixin paddingSpacing {
+  padding: 0px $spacing-500;
+}

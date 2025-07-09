@@ -1,5 +1,6 @@
 .hero {
   @include maxWidths;
+  @include paddingSpacing;
 
   display: flex;
   justify-content: space-between;
@@ -11,11 +12,11 @@
     flex-direction: column;
     gap: $spacing-300;
 
-    max-width: 49%;
+    max-width: 50%;
   }
 
   &__right {
-    max-width: 43%;
+    max-width: 40%;
   }
 
   &__image {
@@ -23,6 +24,6 @@
     max-width: 475px;
     height: auto;
 
-    transform: translateY(50px);
+    transform: translateY(clamp(10px, 5vw, 50px));
   }
 }
