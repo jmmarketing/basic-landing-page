@@ -104,16 +104,21 @@ main {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 50%;
+  width: 51%;
+  max-width: 540px;
+  min-width: 345px;
+  border: 1px solid red;
 }
 .hero__right {
-  max-width: 40%;
+  border: 1px solid red;
+  width: 43%;
+  min-width: 280px;
+  max-width: 475px;
 }
 .hero__image {
   width: 100%;
-  max-width: 475px;
   height: auto;
-  transform: translateY(clamp(10px, 5vw, 50px));
+  transform: translateY(2vw);
 }
 
 .logo {
