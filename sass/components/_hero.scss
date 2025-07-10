@@ -1,12 +1,4 @@
 .hero {
-  @include maxWidths;
-  @include paddingSpacing;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  // gap: $spacing-300;
-
   &__left {
     display: flex;
     flex-direction: column;

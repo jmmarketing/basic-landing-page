@@ -15,37 +15,3 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
-
-main {
-  width: 100%;
-  // max-width: 1440px;
-
-  height: 1698px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: $spacing-1800;
-  padding-top: $spacing-1000;
-
-  position: relative;
-  overflow: hidden;
-
-  // background-image: url(../assets/home/bg-pattern-header.svg);
-  // background-repeat: no-repeat;
-  // background-position: top -58% right -79%;
-  // background-size: 73%;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: clamp(666px, calc(666px + 0.69 * (100vw - 768px)), 1134px);
-    height: clamp(666px, calc(666px + 0.69 * (100vw - 768px)), 1134px);
-    right: clamp(-359px, calc(-274px - 0.126 * (100vw - 768px)), -274px);
-    top: clamp(-420px, calc(-158px - 0.39 * (100vw - 768px)), -158px);
-
-    background-image: url(../assets/home/bg-pattern-header.svg);
-    background-size: cover;
-    z-index: -1;
-  }
-}
