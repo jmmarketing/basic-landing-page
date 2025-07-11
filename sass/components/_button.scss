@@ -4,6 +4,7 @@
 
   border-radius: $radious-full;
   font-family: "Kumbh Sans", sans-serif;
+  font-size: $default-font-size;
   font-weight: 700;
   line-height: 160%;
   border: 0;
@@ -22,6 +23,21 @@
 
     &:focus {
       box-shadow: 0 0 0 3px $neutral-0, 0 0 0 5px $blue-500;
+      outline: none;
+    }
+  }
+
+  &--light-blue {
+    background-color: $blue-100;
+    color: $blue-500;
+
+    &:hover {
+      background-color: $blue-500;
+      color: $neutral-0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $neutral-0, 0 0 0 5px $blue-100;
       outline: none;
     }
   }

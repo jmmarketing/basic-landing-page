@@ -109,6 +109,7 @@ section {
   height: 50px;
   border-radius: 999px;
   font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 160%;
   border: 0;
@@ -125,6 +126,18 @@ section {
 }
 .button--blue:focus {
   box-shadow: 0 0 0 3px #fff, 0 0 0 5px #5175ff;
+  outline: none;
+}
+.button--light-blue {
+  background-color: #e4eaff;
+  color: #5175ff;
+}
+.button--light-blue:hover {
+  background-color: #5175ff;
+  color: #fff;
+}
+.button--light-blue:focus {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #e4eaff;
   outline: none;
 }
 
