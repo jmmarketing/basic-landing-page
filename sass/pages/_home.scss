@@ -1,5 +1,12 @@
 .home-page {
   //Insert styling
+
+  .logo {
+    display: block;
+    //   width: 100%;
+    //   max-width: 1100px;
+  }
+
   .main {
     width: 100%;
     // max-width: 1440px;
@@ -30,12 +37,16 @@
   }
 
   .hero {
-    @include maxWidths;
-    @include paddingSpacing;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     // gap: $spacing-300;
+  }
+
+  .pricing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-400;
+    padding-bottom: $spacing-1000;
   }
 }
