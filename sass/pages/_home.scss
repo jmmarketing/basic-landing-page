@@ -18,9 +18,11 @@
     align-items: center;
     gap: $spacing-1800;
     padding-top: $spacing-1000;
+    background-color: $neutral-40;
 
     position: relative;
     overflow: hidden;
+    z-index: -1;
 
     &::after {
       content: "";

@@ -141,6 +141,30 @@ section {
   outline: none;
 }
 
+.card {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 20px;
+  border-radius: 12px;
+  border: 1px solid lightgray;
+}
+.card__price {
+  text-align: center;
+}
+.card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #747b95;
+  align-items: center;
+}
+.card[data-color=white] {
+  background-color: #fff;
+}
+
 .home-page .logo {
   display: block;
 }
@@ -152,8 +176,10 @@ section {
   align-items: center;
   gap: 140px;
   padding-top: 80px;
+  background-color: #fafafa;
   position: relative;
   overflow: hidden;
+  z-index: -1;
 }
 .home-page .main::after {
   content: "";
