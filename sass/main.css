@@ -30,13 +30,11 @@ body {
   letter-spacing: 0;
   font-weight: 700;
   line-height: 120%;
-  color: #25293a;
 }
 
 .sub-heading {
-  font-size: clamp(1.6rem, 1vw, 1.8rem);
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
   line-height: 150%;
-  color: #747b95;
 }
 
 .title {
@@ -93,6 +91,12 @@ section {
   max-width: 540px;
   min-width: 345px;
 }
+.hero__title {
+  color: #25293a;
+}
+.hero__sub-title {
+  color: #747b95;
+}
 .hero__right {
   width: 43%;
   min-width: 280px;
@@ -101,7 +105,7 @@ section {
 .hero__image {
   width: 100%;
   height: auto;
-  transform: translateY(1vw);
+  transform: translateY(2.5vw);
 }
 
 .button {
@@ -140,6 +144,17 @@ section {
   box-shadow: 0 0 0 3px #fff, 0 0 0 5px #e4eaff;
   outline: none;
 }
+.button--white {
+  background-color: #fff;
+  color: #5175ff;
+}
+.button--white:hover {
+  background-color: #e4eaff;
+}
+.button--white:focus {
+  box-shadow: 0 0 0 3px #5175ff, 0 0 0 5px #fff;
+  outline: none;
+}
 
 .card {
   display: flex;
@@ -151,8 +166,14 @@ section {
   border-radius: 12px;
   border: 1px solid lightgray;
 }
+.card__plan {
+  width: 100%;
+  text-align: center;
+  color: #333950;
+}
 .card__price {
   text-align: center;
+  color: #333950;
 }
 .card__details {
   display: flex;
@@ -164,22 +185,29 @@ section {
 .card[data-color=white] {
   background-color: #fff;
 }
+.card[data-color=blue] {
+  background-color: #5175ff;
+  color: #fff;
+}
+.card[data-color=blue] :is(.card__details, .card__price, .card__plan) {
+  color: #fff;
+}
 
+.home-page {
+  background-color: #fafafa;
+}
 .home-page .logo {
   display: block;
 }
 .home-page .main {
-  width: 100%;
-  height: 1698px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 140px;
   padding-top: 80px;
-  background-color: #fafafa;
   position: relative;
   overflow: hidden;
-  z-index: -1;
 }
 .home-page .main::after {
   content: "";
@@ -188,7 +216,7 @@ section {
   height: clamp(666px, 666px + 0.69 * (100vw - 768px), 1134px);
   right: clamp(-359px, -274px - 0.126 * (100vw - 768px), -274px);
   top: clamp(-420px, -158px - 0.39 * (100vw - 768px), -158px);
-  background-image: url(../assets/home/bg-pattern-header.svg);
+  background: url(../assets/home/bg-pattern-header.svg);
   background-size: cover;
   z-index: -1;
 }

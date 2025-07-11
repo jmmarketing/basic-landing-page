@@ -11,10 +11,14 @@
   border: 1px solid lightgray;
 
   &__plan {
+    width: 100%;
+    text-align: center;
+    color: $neutral-800;
   }
 
   &__price {
     text-align: center;
+    color: $neutral-800;
   }
 
   &__details {
@@ -27,5 +31,14 @@
 
   &[data-color="white"] {
     background-color: $neutral-0;
+  }
+
+  &[data-color="blue"] {
+    background-color: $blue-500;
+    color: $neutral-0;
+
+    & :is(.card__details, .card__price, .card__plan) {
+      color: $neutral-0;
+    }
   }
 }

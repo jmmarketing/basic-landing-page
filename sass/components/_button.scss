@@ -41,4 +41,18 @@
       outline: none;
     }
   }
+
+  &--white {
+    background-color: $neutral-0;
+    color: $blue-500;
+
+    &:hover {
+      background-color: $blue-100;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $blue-500, 0 0 0 5px $neutral-0;
+      outline: none;
+    }
+  }
 }
