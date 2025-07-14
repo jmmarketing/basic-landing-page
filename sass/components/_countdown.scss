@@ -1,0 +1,23 @@
+.countdown {
+  &__container {
+    display: flex;
+    gap: $spacing-200;
+  }
+  &__timer-card {
+    background-color: $neutral-800;
+    border-radius: $radius-12;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: $spacing-050;
+
+    width: 100px;
+    padding: $spacing-200 $spacing-150;
+
+    & :is(.label) {
+      opacity: 0.5;
+    }
+  }
+}
