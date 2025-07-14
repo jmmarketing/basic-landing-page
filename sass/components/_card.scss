@@ -8,17 +8,17 @@
   padding: $spacing-500 $spacing-250;
   border-radius: $radius-12;
 
-  border: 1px solid lightgray;
+  //   border: 1px solid lightgray;
+
+  color: $neutral-800;
 
   &__plan {
     width: 100%;
     text-align: center;
-    color: $neutral-800;
   }
 
   &__price {
     text-align: center;
-    color: $neutral-800;
   }
 
   &__details {
@@ -27,6 +27,7 @@
     gap: $spacing-200;
     color: $neutral-500;
     align-items: center;
+    text-align: center;
   }
 
   &[data-color="white"] {
@@ -35,7 +36,7 @@
 
   &[data-color="blue"] {
     background-color: $blue-500;
-    color: $neutral-0;
+    // color: $neutral-0;
 
     & :is(.card__details, .card__price, .card__plan) {
       color: $neutral-0;

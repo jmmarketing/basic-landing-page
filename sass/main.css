@@ -164,16 +164,14 @@ section {
   align-items: center;
   padding: 40px 20px;
   border-radius: 12px;
-  border: 1px solid lightgray;
+  color: #333950;
 }
 .card__plan {
   width: 100%;
   text-align: center;
-  color: #333950;
 }
 .card__price {
   text-align: center;
-  color: #333950;
 }
 .card__details {
   display: flex;
@@ -181,13 +179,13 @@ section {
   gap: 16px;
   color: #747b95;
   align-items: center;
+  text-align: center;
 }
 .card[data-color=white] {
   background-color: #fff;
 }
 .card[data-color=blue] {
   background-color: #5175ff;
-  color: #fff;
 }
 .card[data-color=blue] :is(.card__details, .card__price, .card__plan) {
   color: #fff;
@@ -227,7 +225,16 @@ section {
 }
 .home-page .pricing {
   display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.home-page .pricing__card-container {
+  display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  padding-bottom: 80px;
+}
+.home-page .countdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
