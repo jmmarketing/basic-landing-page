@@ -29,8 +29,8 @@ ORDER [When refactoring for responsiveness]: Base + typography > general layout 
   }
 
   @if $breakpoint == tablet {
-    @media only screen and (max-width: 65.5em) {
-      //1048px
+    @media only screen and (max-width: 48em) {
+      //768px
       @content;
     }
   }

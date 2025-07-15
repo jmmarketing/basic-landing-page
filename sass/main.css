@@ -178,12 +178,31 @@ section {
   border-radius: 12px;
   color: #333950;
 }
+@media only screen and (max-width: 48em) {
+  .card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 48px;
+  }
+}
 .card__plan {
   width: 100%;
   text-align: center;
 }
+@media only screen and (max-width: 48em) {
+  .card__plan {
+    text-align: left;
+  }
+}
 .card__price {
   text-align: center;
+}
+@media only screen and (max-width: 48em) {
+  .card__price {
+    text-align: left;
+    width: 50%;
+  }
 }
 .card__details {
   display: flex;
@@ -193,8 +212,20 @@ section {
   align-items: center;
   text-align: center;
 }
+@media only screen and (max-width: 48em) {
+  .card__details {
+    text-align: left;
+    align-items: flex-start;
+    width: 50%;
+  }
+}
 .card[data-color=white] {
   background-color: #fff;
+}
+@media only screen and (max-width: 48em) {
+  .card[data-color=white] {
+    box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.25);
+  }
 }
 .card[data-color=blue] {
   background-color: #5175ff;
@@ -264,10 +295,21 @@ section {
   flex-direction: column;
   gap: 80px;
 }
+@media only screen and (max-width: 48em) {
+  .home-page .pricing {
+    gap: 96px;
+  }
+}
 .home-page .pricing__card-container {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+}
+@media only screen and (max-width: 48em) {
+  .home-page .pricing__card-container {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 .home-page .countdown {
   display: flex;

@@ -12,13 +12,30 @@
 
   color: $neutral-800;
 
+  @include respond(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+
+    padding: $spacing-600;
+  }
+
   &__plan {
     width: 100%;
     text-align: center;
+
+    @include respond(tablet) {
+      text-align: left;
+    }
   }
 
   &__price {
     text-align: center;
+
+    @include respond(tablet) {
+      text-align: left;
+      width: 50%;
+    }
   }
 
   &__details {
@@ -28,10 +45,20 @@
     color: $neutral-500;
     align-items: center;
     text-align: center;
+
+    @include respond(tablet) {
+      text-align: left;
+      align-items: flex-start;
+      width: 50%;
+    }
   }
 
   &[data-color="white"] {
     background-color: $neutral-0;
+
+    @include respond(tablet) {
+      box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.25);
+    }
   }
 
   &[data-color="blue"] {
