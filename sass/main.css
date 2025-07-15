@@ -169,6 +169,8 @@ section {
 }
 
 .card {
+  container-name: pricing-card;
+  container-type: normal;
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
@@ -178,31 +180,12 @@ section {
   border-radius: 12px;
   color: #333950;
 }
-@media only screen and (max-width: 48em) {
-  .card {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0;
-    padding: 48px;
-  }
-}
 .card__plan {
   width: 100%;
   text-align: center;
 }
-@media only screen and (max-width: 48em) {
-  .card__plan {
-    text-align: left;
-  }
-}
 .card__price {
   text-align: center;
-}
-@media only screen and (max-width: 48em) {
-  .card__price {
-    text-align: left;
-    width: 50%;
-  }
 }
 .card__details {
   display: flex;
@@ -211,13 +194,6 @@ section {
   color: #747b95;
   align-items: center;
   text-align: center;
-}
-@media only screen and (max-width: 48em) {
-  .card__details {
-    text-align: left;
-    align-items: flex-start;
-    width: 50%;
-  }
 }
 .card[data-color=white] {
   background-color: #fff;
@@ -234,6 +210,30 @@ section {
   color: #fff;
 }
 
+@container pricing-card (width > 350px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 48px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .card__plan {
+    width: 100%;
+    text-align: left;
+  }
+  .card__price {
+    text-align: left;
+    width: 50%;
+  }
+  .card__details {
+    text-align: left;
+    align-items: flex-start;
+    width: 50%;
+  }
+}
 .countdown :is(.upper-text) {
   width: 100%;
   text-align: left;

@@ -1,4 +1,7 @@
 .card {
+  container-name: pricing-card;
+  container-type: normal;
+
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
@@ -12,30 +15,30 @@
 
   color: $neutral-800;
 
-  @include respond(tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0;
+  //   @include respond(tablet) {
+  //     flex-direction: row;
+  //     flex-wrap: wrap;
+  //     gap: 0;
 
-    padding: $spacing-600;
-  }
+  //     padding: $spacing-600;
+  //   }
 
   &__plan {
     width: 100%;
     text-align: center;
 
-    @include respond(tablet) {
-      text-align: left;
-    }
+    // @include respond(tablet) {
+    //   text-align: left;
+    // }
   }
 
   &__price {
     text-align: center;
 
-    @include respond(tablet) {
-      text-align: left;
-      width: 50%;
-    }
+    // @include respond(tablet) {
+    //   text-align: left;
+    //   width: 50%;
+    // }
   }
 
   &__details {
@@ -46,11 +49,11 @@
     align-items: center;
     text-align: center;
 
-    @include respond(tablet) {
-      text-align: left;
-      align-items: flex-start;
-      width: 50%;
-    }
+    // @include respond(tablet) {
+    //   text-align: left;
+    //   align-items: flex-start;
+    //   width: 50%;
+    // }
   }
 
   &[data-color="white"] {
@@ -67,6 +70,33 @@
 
     & :is(.card__details, .card__price, .card__plan) {
       color: $neutral-0;
+    }
+  }
+}
+
+@container pricing-card (width > 350px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+
+    padding: $spacing-600;
+    height: fit-content;
+
+    &__plan {
+      width: 100%;
+      text-align: left;
+    }
+
+    &__price {
+      text-align: left;
+      width: 50%;
+    }
+    &__details {
+      text-align: left;
+      align-items: flex-start;
+      width: 50%;
     }
   }
 }
