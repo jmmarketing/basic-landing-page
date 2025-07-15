@@ -67,6 +67,10 @@ input {
   color: #fff;
 }
 
+.no-shadow {
+  box-shadow: none !important;
+}
+
 *,
 *::before,
 *::after {
@@ -235,6 +239,7 @@ section {
   align-items: center;
   gap: 140px;
   padding-top: 80px;
+  margin-bottom: -485px;
   position: relative;
   overflow: hidden;
 }
@@ -274,5 +279,16 @@ section {
   width: 100vw;
   height: 603px;
   background-color: #25293a;
-  margin-top: -485px;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+.home-page .footer::after {
+  content: "";
+  position: absolute;
+  width: 2036px;
+  height: 2036px;
+  left: -700px;
+  bottom: -830px;
+  background: url(../assets/home/bg-pattern-footer.svg);
 }/*# sourceMappingURL=main.css.map */

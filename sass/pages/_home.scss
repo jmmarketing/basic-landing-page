@@ -18,6 +18,7 @@
     align-items: center;
     gap: $spacing-1800;
     padding-top: $spacing-1000;
+    margin-bottom: -485px;
     // background-color: $neutral-40;
 
     position: relative;
@@ -69,6 +70,22 @@
     height: 603px;
     background-color: $neutral-900;
 
-    margin-top: -485px;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2036px;
+      height: 2036px;
+
+      left: -700px;
+      bottom: -830px;
+
+      background: url(../assets/home/bg-pattern-footer.svg);
+      // background-size: cover;
+      // z-index: -1;
+    }
   }
 }
