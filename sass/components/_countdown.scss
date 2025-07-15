@@ -1,7 +1,13 @@
 .countdown {
+  & :is(.upper-text) {
+    width: 100%;
+    text-align: left;
+  }
+
   &__container {
     display: flex;
     gap: $spacing-200;
+    padding-top: $spacing-150;
   }
   &__timer-card {
     background-color: $neutral-800;

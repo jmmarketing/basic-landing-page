@@ -199,9 +199,14 @@ section {
   color: #fff;
 }
 
+.countdown :is(.upper-text) {
+  width: 100%;
+  text-align: left;
+}
 .countdown__container {
   display: flex;
   gap: 16px;
+  padding-top: 12px;
 }
 .countdown__timer-card {
   background-color: #333950;
@@ -261,6 +266,13 @@ section {
 }
 .home-page .countdown {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+.home-page .footer {
+  width: 100vw;
+  height: 603px;
+  background-color: #25293a;
+  margin-top: -485px;
 }/*# sourceMappingURL=main.css.map */
