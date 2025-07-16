@@ -71,7 +71,7 @@
   }
 }
 
-@container card-container (width <= 688px) {
+@container card-container ( 504px < width <= 689px) {
   .card {
     border: 3px solid red !important;
     display: flex;
@@ -80,16 +80,20 @@
     gap: 0;
 
     padding: $spacing-600;
+    //    padding: clamp($spacing-500, 8cqw, $spacing-600)
+    //   clamp($spacing-300, 4cqw, $spacing-600);
     height: fit-content;
 
     &__plan {
       width: 100%;
       text-align: left;
+      padding-bottom: $spacing-200;
     }
 
     &__price {
       text-align: left;
       width: 50%;
+      padding-bottom: $spacing-300;
     }
     &__details {
       text-align: left;

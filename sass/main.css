@@ -208,7 +208,7 @@ section {
   color: #fff;
 }
 
-@container card-container (width <= 688px) {
+@container card-container ( 504px < width <= 689px) {
   .card {
     border: 3px solid red !important;
     display: flex;
@@ -222,10 +222,12 @@ section {
   .card__plan {
     width: 100%;
     text-align: left;
+    padding-bottom: 16px;
   }
   .card__price {
     text-align: left;
     width: 50%;
+    padding-bottom: 24px;
   }
   .card__details {
     text-align: left;
