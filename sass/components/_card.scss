@@ -23,7 +23,7 @@
   &__plan {
     width: 100%;
     text-align: center;
-
+    padding-bottom: $spacing-500;
     // @include respond(tablet) {
     //   text-align: left;
     // }
@@ -82,7 +82,7 @@
     padding: $spacing-600;
     //    padding: clamp($spacing-500, 8cqw, $spacing-600)
     //   clamp($spacing-300, 4cqw, $spacing-600);
-    height: fit-content;
+    // height: fit-content;
 
     &__plan {
       width: 100%;
@@ -96,6 +96,7 @@
       padding-bottom: $spacing-300;
     }
     &__details {
+      transform: translateY(25px);
       text-align: left;
       align-items: flex-start;
       width: 50%;

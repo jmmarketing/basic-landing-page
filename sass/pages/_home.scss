@@ -25,6 +25,15 @@
     overflow: hidden;
     // z-index: -1;
 
+    @include respond(tablet) {
+      gap: $spacing-1400;
+    }
+
+    @include respond(phone) {
+      gap: $spacing-1000;
+      padding-top: $spacing-500;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -66,6 +75,10 @@
       @include respond(tablet) {
         flex-direction: column;
         gap: $spacing-250;
+      }
+
+      @include respond(phone) {
+        gap: $spacing-300;
       }
     }
   }

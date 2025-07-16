@@ -22,8 +22,8 @@ ORDER [When refactoring for responsiveness]: Base + typography > general layout 
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media only screen and (max-width: 36.5em) {
-      //580px
+    @media only screen and (max-width: 31.25em) {
+      //500px
       @content;
     }
   }
@@ -46,4 +46,8 @@ ORDER [When refactoring for responsiveness]: Base + typography > general layout 
 
 @mixin paddingSpacing {
   padding: 0px $spacing-500;
+
+  @include respond(phone) {
+    padding: 0px $spacing-200;
+  }
 }

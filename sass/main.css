@@ -26,7 +26,7 @@ body {
 }
 
 .heading {
-  font-size: clamp(4rem, 5vw, 5.6rem);
+  font-size: 5.6rem;
   letter-spacing: 0;
   font-weight: 700;
   line-height: 120%;
@@ -93,6 +93,11 @@ section {
   width: 100%;
   max-width: 1180px;
   padding: 0px 40px;
+}
+@media only screen and (max-width: 31.25em) {
+  section {
+    padding: 0px 16px;
+  }
 }
 
 .hero__left {
@@ -181,6 +186,7 @@ section {
 .card__plan {
   width: 100%;
   text-align: center;
+  padding-bottom: 40px;
 }
 .card__price {
   text-align: center;
@@ -216,8 +222,6 @@ section {
     flex-wrap: wrap;
     gap: 0;
     padding: 48px;
-    height: -moz-fit-content;
-    height: fit-content;
   }
   .card__plan {
     width: 100%;
@@ -230,6 +234,7 @@ section {
     padding-bottom: 24px;
   }
   .card__details {
+    transform: translateY(25px);
     text-align: left;
     align-items: flex-start;
     width: 50%;
@@ -275,6 +280,17 @@ section {
   position: relative;
   overflow: hidden;
 }
+@media only screen and (max-width: 48em) {
+  .home-page .main {
+    gap: 112px;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .home-page .main {
+    gap: 80px;
+    padding-top: 40px;
+  }
+}
 .home-page .main::after {
   content: "";
   position: absolute;
@@ -312,6 +328,11 @@ section {
   .home-page .pricing__card-container {
     flex-direction: column;
     gap: 20px;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .home-page .pricing__card-container {
+    gap: 24px;
   }
 }
 .home-page .countdown {
