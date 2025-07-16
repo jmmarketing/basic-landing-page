@@ -27,11 +27,14 @@
 
     @include respond(tablet) {
       gap: $spacing-1400;
+      margin-bottom: -850px;
     }
 
     @include respond(phone) {
       gap: $spacing-1000;
       padding-top: $spacing-500;
+
+      margin-bottom: -1135px;
     }
 
     &::after {
@@ -64,6 +67,10 @@
       gap: $spacing-1200;
     }
 
+    @include respond(phone) {
+      gap: $spacing-1000;
+    }
+
     &__card-container {
       container-type: inline-size;
       container-name: card-container;
@@ -88,6 +95,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+    @include respond(tablet) {
+      flex-direction: column;
+    }
   }
 
   .footer {
@@ -111,6 +122,23 @@
       background: url(../assets/home/bg-pattern-footer.svg);
       // background-size: cover;
       // z-index: -1;
+
+      @include respond(tablet) {
+        width: 1454px;
+        height: 1454px;
+        background-size: cover;
+
+        bottom: -62.5vw;
+        left: -44vw;
+      }
+    }
+
+    @include respond(tablet) {
+      height: 986px;
+    }
+
+    @include respond(phone) {
+      height: 1248px;
     }
   }
 }

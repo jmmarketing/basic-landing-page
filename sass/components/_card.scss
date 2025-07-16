@@ -8,34 +8,28 @@
   padding: $spacing-500 $spacing-250;
   border-radius: $radius-12;
 
-  //   border: 1px solid lightgray;
-
   color: $neutral-800;
 
-  //   @include respond(tablet) {
-  //     flex-direction: row;
-  //     flex-wrap: wrap;
-  //     gap: 0;
-
-  //     padding: $spacing-600;
-  //   }
+  @include respond(phone) {
+    padding: $spacing-500 $spacing-300;
+    gap: $spacing-600;
+  }
 
   &__plan {
     width: 100%;
     text-align: center;
     padding-bottom: $spacing-500;
-    // @include respond(tablet) {
-    //   text-align: left;
-    // }
+
+    @include respond(phone) {
+      padding-bottom: $spacing-200;
+    }
   }
 
   &__price {
     text-align: center;
-
-    // @include respond(tablet) {
-    //   text-align: left;
-    //   width: 50%;
-    // }
+    & .heading {
+      padding-bottom: $spacing-100;
+    }
   }
 
   &__details {
@@ -45,12 +39,6 @@
     color: $neutral-500;
     align-items: center;
     text-align: center;
-
-    // @include respond(tablet) {
-    //   text-align: left;
-    //   align-items: flex-start;
-    //   width: 50%;
-    // }
   }
 
   &[data-color="white"] {
@@ -63,7 +51,6 @@
 
   &[data-color="blue"] {
     background-color: $blue-500;
-    // color: $neutral-0;
 
     & :is(.card__details, .card__price, .card__plan) {
       color: $neutral-0;
@@ -73,7 +60,6 @@
 
 @container card-container ( 504px < width <= 689px) {
   .card {
-    border: 3px solid red !important;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

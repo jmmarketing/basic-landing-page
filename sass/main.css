@@ -94,7 +94,7 @@ section {
   max-width: 1180px;
   padding: 0px 40px;
 }
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 36.5em) {
   section {
     padding: 0px 16px;
   }
@@ -183,13 +183,27 @@ section {
   border-radius: 12px;
   color: #333950;
 }
+@media only screen and (max-width: 36.5em) {
+  .card {
+    padding: 40px 24px;
+    gap: 48px;
+  }
+}
 .card__plan {
   width: 100%;
   text-align: center;
   padding-bottom: 40px;
 }
+@media only screen and (max-width: 36.5em) {
+  .card__plan {
+    padding-bottom: 16px;
+  }
+}
 .card__price {
   text-align: center;
+}
+.card__price .heading {
+  padding-bottom: 8px;
 }
 .card__details {
   display: flex;
@@ -216,7 +230,6 @@ section {
 
 @container card-container ( 504px < width <= 689px) {
   .card {
-    border: 3px solid red !important;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -244,10 +257,21 @@ section {
   width: 100%;
   text-align: left;
 }
+@media only screen and (max-width: 48em) {
+  .countdown :is(.upper-text) {
+    text-align: center;
+  }
+}
 .countdown__container {
   display: flex;
   gap: 16px;
   padding-top: 12px;
+}
+@media only screen and (max-width: 48em) {
+  .countdown__container {
+    padding-top: 16px;
+    padding-bottom: 48px;
+  }
 }
 .countdown__timer-card {
   background-color: #333950;
@@ -283,12 +307,14 @@ section {
 @media only screen and (max-width: 48em) {
   .home-page .main {
     gap: 112px;
+    margin-bottom: -850px;
   }
 }
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 36.5em) {
   .home-page .main {
     gap: 80px;
     padding-top: 40px;
+    margin-bottom: -1135px;
   }
 }
 .home-page .main::after {
@@ -317,6 +343,11 @@ section {
     gap: 96px;
   }
 }
+@media only screen and (max-width: 36.5em) {
+  .home-page .pricing {
+    gap: 80px;
+  }
+}
 .home-page .pricing__card-container {
   container-type: inline-size;
   container-name: card-container;
@@ -330,7 +361,7 @@ section {
     gap: 20px;
   }
 }
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 36.5em) {
   .home-page .pricing__card-container {
     gap: 24px;
   }
@@ -340,6 +371,11 @@ section {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (max-width: 48em) {
+  .home-page .countdown {
+    flex-direction: column;
+  }
 }
 .home-page .footer {
   width: 100vw;
@@ -357,4 +393,23 @@ section {
   left: -700px;
   bottom: -830px;
   background: url(../assets/home/bg-pattern-footer.svg);
+}
+@media only screen and (max-width: 48em) {
+  .home-page .footer::after {
+    width: 1454px;
+    height: 1454px;
+    background-size: cover;
+    bottom: -62.5vw;
+    left: -44vw;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .home-page .footer {
+    height: 986px;
+  }
+}
+@media only screen and (max-width: 36.5em) {
+  .home-page .footer {
+    height: 1248px;
+  }
 }/*# sourceMappingURL=main.css.map */

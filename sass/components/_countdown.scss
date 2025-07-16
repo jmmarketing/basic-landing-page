@@ -2,12 +2,21 @@
   & :is(.upper-text) {
     width: 100%;
     text-align: left;
+
+    @include respond(tablet) {
+      text-align: center;
+    }
   }
 
   &__container {
     display: flex;
     gap: $spacing-200;
     padding-top: $spacing-150;
+
+    @include respond(tablet) {
+      padding-top: $spacing-200;
+      padding-bottom: $spacing-600;
+    }
   }
   &__timer-card {
     background-color: $neutral-800;
