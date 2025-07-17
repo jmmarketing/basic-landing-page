@@ -94,7 +94,7 @@ section {
   max-width: 1180px;
   padding: 0px 40px;
 }
-@media only screen and (max-width: 36.5em) {
+@media only screen and (max-width: 26.5em) {
   section {
     padding: 0px 16px;
   }
@@ -183,7 +183,7 @@ section {
   border-radius: 12px;
   color: #333950;
 }
-@media only screen and (max-width: 36.5em) {
+@media only screen and (max-width: 26.5em) {
   .card {
     padding: 40px 24px;
     gap: 48px;
@@ -194,7 +194,7 @@ section {
   text-align: center;
   padding-bottom: 40px;
 }
-@media only screen and (max-width: 36.5em) {
+@media only screen and (max-width: 26.5em) {
   .card__plan {
     padding-bottom: 16px;
   }
@@ -343,7 +343,7 @@ section {
     gap: 96px;
   }
 }
-@media only screen and (max-width: 36.5em) {
+@media only screen and (max-width: 26.5em) {
   .home-page .pricing {
     gap: 80px;
   }
@@ -361,7 +361,7 @@ section {
     gap: 20px;
   }
 }
-@media only screen and (max-width: 36.5em) {
+@media only screen and (max-width: 26.5em) {
   .home-page .pricing__card-container {
     gap: 24px;
   }
@@ -408,7 +408,7 @@ section {
     height: 986px;
   }
 }
-@media only screen and (max-width: 36.5em) {
+@media only screen and (max-width: 26.5em) {
   .home-page .footer {
     height: 1248px;
   }

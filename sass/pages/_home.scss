@@ -30,7 +30,7 @@
       margin-bottom: -850px;
     }
 
-    @include respond(phone) {
+    @include respond(xl-phone) {
       gap: $spacing-1000;
       padding-top: $spacing-500;
 
