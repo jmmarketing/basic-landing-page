@@ -1,6 +1,6 @@
 /*
 0 - 600px:        Phone
-600 - 900px:      Tablet Portrait
+600 - 900px:      Tablet Portrait / xl-phone
 900 - 1200px:     Tablet Landscape
 [1200 - 1800px]:  Desktop - Where Normal Styles Apply
 1800px + :        Big Desktop
@@ -100,22 +100,28 @@ section {
   }
 }
 
+.hero {
+  container-name: hero;
+  container-type: normal;
+}
 .hero__left {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 51%;
+  width: 50%;
   max-width: 540px;
   min-width: 345px;
 }
 .hero__title {
   color: #25293a;
+  font-size: clamp(4rem, 5cqw, 5.6rem);
 }
 .hero__sub-title {
   color: #747b95;
+  font-size: clamp(1.6rem, 2cqw, 1.8rem);
 }
 .hero__right {
-  width: 43%;
+  width: 42%;
   min-width: 280px;
   max-width: 475px;
 }

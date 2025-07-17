@@ -1,10 +1,13 @@
 .hero {
+  container-name: hero;
+  container-type: normal;
+
   &__left {
     display: flex;
     flex-direction: column;
     gap: $spacing-300;
 
-    width: 51%;
+    width: 50%;
     max-width: 540px;
     min-width: 345px;
 
@@ -13,15 +16,17 @@
 
   &__title {
     color: $neutral-900;
+    font-size: clamp(4rem, 5cqw, 5.6rem);
   }
 
   &__sub-title {
     color: $neutral-500;
+    font-size: clamp(1.6rem, 2cqw, 1.8rem);
   }
 
   &__right {
     // border: 1px solid red;
-    width: 43%;
+    width: 42%;
     min-width: 280px;
     max-width: 475px;
   }
