@@ -286,6 +286,14 @@ section {
 .countdown__timer-card :is(.label) {
   opacity: 0.5;
 }
+@media only screen and (max-width: 36.5em) {
+  .countdown__timer-card {
+    width: 74px;
+  }
+  .countdown__timer-card :is(.heading) {
+    font-size: 4rem;
+  }
+}
 
 .home-page {
   background-color: #fafafa;

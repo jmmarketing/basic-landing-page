@@ -34,5 +34,13 @@
     & :is(.label) {
       opacity: 0.5;
     }
+
+    @include respond(xl-phone) {
+      width: 74px;
+
+      & :is(.heading) {
+        font-size: 4rem;
+      }
+    }
   }
 }
