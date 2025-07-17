@@ -183,7 +183,7 @@ section {
   border-radius: 12px;
   color: #333950;
 }
-@media only screen and (max-width: 26.5em) {
+@media only screen and (max-width: 36.5em) {
   .card {
     padding: 40px 24px;
     gap: 48px;
@@ -194,7 +194,7 @@ section {
   text-align: center;
   padding-bottom: 40px;
 }
-@media only screen and (max-width: 26.5em) {
+@media only screen and (max-width: 36.5em) {
   .card__plan {
     padding-bottom: 16px;
   }
@@ -403,9 +403,30 @@ section {
     left: -44vw;
   }
 }
+@media only screen and (max-width: 36.5em) {
+  .home-page .footer::after {
+    width: 1200px;
+    height: 1200px;
+    background-size: cover;
+    bottom: -62.5vw;
+    left: -44vw;
+  }
+}
+@media only screen and (max-width: 26.5em) {
+  .home-page .footer::after {
+    background-size: cover;
+    bottom: -25.5vw;
+    left: -105vw;
+  }
+}
 @media only screen and (max-width: 48em) {
   .home-page .footer {
     height: 986px;
+  }
+}
+@media only screen and (max-width: 36.5em) {
+  .home-page .footer {
+    height: 1215px;
   }
 }
 @media only screen and (max-width: 26.5em) {

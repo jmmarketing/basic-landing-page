@@ -10,7 +10,7 @@
 
   color: $neutral-800;
 
-  @include respond(phone) {
+  @include respond(xl-phone) {
     padding: $spacing-500 $spacing-300;
     gap: $spacing-600;
   }
@@ -20,7 +20,7 @@
     text-align: center;
     padding-bottom: $spacing-500;
 
-    @include respond(phone) {
+    @include respond(xl-phone) {
       padding-bottom: $spacing-200;
     }
   }

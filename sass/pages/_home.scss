@@ -131,10 +131,30 @@
         bottom: -62.5vw;
         left: -44vw;
       }
+
+      @include respond(xl-phone) {
+        width: 1200px;
+        height: 1200px;
+        background-size: cover;
+
+        bottom: -62.5vw;
+        left: -44vw;
+      }
+
+      @include respond(phone) {
+        background-size: cover;
+
+        bottom: -25.5vw;
+        left: -105vw;
+      }
     }
 
     @include respond(tablet) {
       height: 986px;
+    }
+
+    @include respond(xl-phone) {
+      height: 1215px;
     }
 
     @include respond(phone) {
