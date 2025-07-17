@@ -59,6 +59,7 @@
 }
 
 @container card-container ( 504px < width <= 689px) {
+  // Need to explore here.
   .card {
     display: flex;
     flex-direction: row;
