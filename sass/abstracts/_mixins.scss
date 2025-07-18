@@ -58,3 +58,9 @@ ORDER [When refactoring for responsiveness]: Base + typography > general layout 
     padding: 0px $spacing-200;
   }
 }
+
+@mixin logoLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

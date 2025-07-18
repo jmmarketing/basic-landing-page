@@ -1,0 +1,7 @@
+.signup {
+  background-color: $neutral-40;
+
+  .logo {
+    @include logoLayout;
+  }
+}

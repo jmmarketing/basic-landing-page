@@ -2,9 +2,7 @@
   //Insert styling
   background-color: $neutral-40;
   .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @include logoLayout;
     //   width: 100%;
     //   max-width: 1100px;
   }
@@ -29,6 +27,8 @@
     position: relative;
     overflow: hidden;
     // z-index: -1;
+
+    transition: padding 0.3s ease, gap 0.3s ease;
 
     @include respond(tablet) {
       gap: $spacing-1400;
@@ -90,6 +90,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: $spacing-400;
+
+      transition: gap 0.3s ease;
 
       @include respond(tablet) {
         flex-direction: column;
