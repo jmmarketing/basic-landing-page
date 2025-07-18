@@ -22,6 +22,7 @@
   &__sub-title {
     color: $neutral-500;
     font-size: clamp(1.6rem, 2cqw, 1.8rem);
+    line-height: 160%;
   }
 
   &__right {
@@ -36,5 +37,22 @@
     height: auto;
 
     transform: translateY(2.5vw);
+  }
+}
+
+@container main ( max-width: 720px) {
+  .hero__left {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-300;
+
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__right {
+    width: 53%;
+    max-width: 200px;
   }
 }

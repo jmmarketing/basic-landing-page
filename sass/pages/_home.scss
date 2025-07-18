@@ -2,14 +2,19 @@
   //Insert styling
   background-color: $neutral-40;
   .logo {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     //   width: 100%;
     //   max-width: 1100px;
   }
 
   .main {
+    container-name: main;
+    container-type: inline-size;
+
     width: 100vw;
-    // max-width: 1440px;
+    // max-width: 600px;
 
     // height: 1698px;
 
@@ -159,6 +164,18 @@
 
     @include respond(phone) {
       height: 1248px;
+    }
+  }
+
+  @container main ( max-width: 720px) {
+    .hero {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: $spacing-150;
+    }
+
+    .logo {
+      align-items: center;
     }
   }
 }
