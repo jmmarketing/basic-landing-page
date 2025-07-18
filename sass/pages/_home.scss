@@ -53,6 +53,13 @@
       background: url(../assets/home/bg-pattern-header.svg);
       background-size: cover;
       z-index: -1;
+
+      @include respond(xl-phone) {
+        width: 460px;
+        height: 460px;
+        top: -170px;
+        right: 40px;
+      }
     }
   }
 
