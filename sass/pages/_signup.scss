@@ -3,6 +3,7 @@
 
   .main {
     width: 100vw;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -27,5 +28,18 @@
 
     width: calc(420 / 1440) * 100vw;
     height: 100%;
+    z-index: -1;
+
+    &::after {
+      content: "";
+      background: url(../assets/sign-up/bg-pattern-side.svg);
+      background-size: cover;
+
+      position: absolute;
+      width: 2036px;
+      height: 2036px;
+
+      overflow: hidden;
+    }
   }
 }
