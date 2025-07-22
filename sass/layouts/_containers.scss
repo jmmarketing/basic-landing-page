@@ -1,0 +1,14 @@
+.main {
+  container-name: main;
+  container-type: inline-size;
+}
+
+.hero {
+  container-name: hero;
+  container-type: normal;
+}
+
+.pricing__card-container {
+  container-type: inline-size;
+  container-name: card-container;
+}

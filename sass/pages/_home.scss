@@ -3,8 +3,8 @@
   background-color: $neutral-40;
 
   .main {
-    container-name: main;
-    container-type: inline-size;
+    // container-name: main;
+    // container-type: inline-size;
 
     width: 100vw;
     // max-width: 600px;
@@ -79,8 +79,8 @@
     }
 
     &__card-container {
-      container-type: inline-size;
-      container-name: card-container;
+      // container-type: inline-size;
+      // container-name: card-container;
 
       display: flex;
       flex-wrap: wrap;
