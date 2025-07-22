@@ -1,0 +1,56 @@
+.footer {
+  width: 100vw;
+  height: 603px;
+  background-color: $neutral-900;
+
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+
+  @include respond(tablet) {
+    height: 985px;
+  }
+
+  @include respond(xl-phone) {
+    height: 1225px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2036px;
+    height: 2036px;
+
+    left: -700px;
+    bottom: -830px;
+
+    background: url(../assets/home/bg-pattern-footer.svg);
+    // background-size: cover;
+    // z-index: -1;
+
+    @include respond(tablet) {
+      width: 1454px;
+      height: 1454px;
+      background-size: cover;
+
+      bottom: -62.5vw;
+      left: -44vw;
+    }
+
+    @include respond(xl-phone) {
+      width: 1200px;
+      height: 1200px;
+      background-size: cover;
+
+      bottom: -62.5vw;
+      left: -44vw;
+    }
+
+    @include respond(phone) {
+      background-size: cover;
+
+      bottom: -25.5vw;
+      left: -105vw;
+    }
+  }
+}

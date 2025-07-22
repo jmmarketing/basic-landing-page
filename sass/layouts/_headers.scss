@@ -1,0 +1,11 @@
+.logo {
+  @include logoLayout;
+  //   width: 100%;
+  //   max-width: 1100px;
+}
+
+@container main ( max-width: 720px) {
+  .logo {
+    align-items: center;
+  }
+}
