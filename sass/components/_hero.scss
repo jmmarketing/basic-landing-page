@@ -15,14 +15,17 @@
   }
 
   &__title {
-    color: $neutral-900;
+    color: $neutral-800;
     font-size: clamp(4rem, 5cqw, 5.6rem);
   }
 
   &__sub-title {
     color: $neutral-500;
     font-size: clamp(1.6rem, 2cqw, 1.8rem);
-    line-height: 160%;
+
+    @include respond(xl-phone) {
+      line-height: 160%;
+    }
   }
 
   &__right {

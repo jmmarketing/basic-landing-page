@@ -64,7 +64,7 @@ input {
 }
 
 .white {
-  color: #fff;
+  color: #fff !important;
 }
 
 .no-shadow {
@@ -110,13 +110,17 @@ section {
   min-width: 345px;
 }
 .hero__title {
-  color: #25293a;
+  color: #333950;
   font-size: clamp(4rem, 5cqw, 5.6rem);
 }
 .hero__sub-title {
   color: #747b95;
   font-size: clamp(1.6rem, 2cqw, 1.8rem);
-  line-height: 160%;
+}
+@media only screen and (max-width: 36.5em) {
+  .hero__sub-title {
+    line-height: 160%;
+  }
 }
 .hero__right {
   width: 42%;
@@ -272,6 +276,7 @@ section {
   }
 }
 .countdown :is(.upper-text) {
+  color: #333950;
   width: 100%;
   text-align: left;
 }
@@ -294,6 +299,7 @@ section {
 .countdown__timer-card {
   background-color: #333950;
   border-radius: 12px;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -303,6 +309,13 @@ section {
 }
 .countdown__timer-card :is(.label) {
   opacity: 0.5;
+}
+.countdown__timer-card[data-color=blue] {
+  background-color: #e4eaff;
+  color: #5175ff;
+}
+.countdown__timer-card[data-color=blue] :is(.label) {
+  color: #333950;
 }
 @media only screen and (max-width: 36.5em) {
   .countdown__timer-card {
@@ -401,6 +414,24 @@ section {
   container-name: card-container;
 }
 
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 48em) {
+  .countdown {
+    flex-direction: column;
+  }
+}
+
 .home-page {
   background-color: #fafafa;
 }
@@ -448,11 +479,6 @@ section {
     right: 40px;
   }
 }
-.home-page .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .home-page .pricing {
   display: flex;
   flex-direction: column;
@@ -483,17 +509,6 @@ section {
 @media only screen and (max-width: 26.5em) {
   .home-page .pricing__card-container {
     gap: 24px;
-  }
-}
-.home-page .countdown {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-@media only screen and (max-width: 48em) {
-  .home-page .countdown {
-    flex-direction: column;
   }
 }
 @media only screen and (max-width: 48em) {
@@ -551,9 +566,4 @@ section {
   width: 2036px;
   height: 2036px;
   overflow: hidden;
-}
-.signup .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }/*# sourceMappingURL=main.css.map */

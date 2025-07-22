@@ -58,13 +58,6 @@
     }
   }
 
-  .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // gap: $spacing-300;
-  }
-
   .pricing {
     display: flex;
     flex-direction: column;
@@ -96,17 +89,6 @@
       @include respond(phone) {
         gap: $spacing-300;
       }
-    }
-  }
-
-  .countdown {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-
-    @include respond(tablet) {
-      flex-direction: column;
     }
   }
 
