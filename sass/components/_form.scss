@@ -11,4 +11,30 @@
   display: flex;
   flex-direction: column;
   gap: $spacing-300;
+
+  &__input {
+    font-size: $default-font-size;
+    padding: 0 $spacing-200 $spacing-200;
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid rgb(116, 123, 149, 0.5);
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 1px solid $blue-500;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px $neutral-0, 0 0 0 5px $blue-500;
+    }
+
+    & option {
+      font-weight: 700;
+      color: $neutral-800;
+      & span {
+        opacity: 0.4;
+      }
+    }
+  }
 }

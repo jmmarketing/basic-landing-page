@@ -55,4 +55,20 @@
       outline: none;
     }
   }
+
+  &--submit {
+    background-color: $blue-500;
+    color: $neutral-0;
+    width: 100%;
+
+    &:hover {
+      background-color: $blue-300;
+      box-shadow: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $neutral-0, 0 0 0 5px $blue-500;
+      outline: none;
+    }
+  }
 }

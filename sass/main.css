@@ -194,6 +194,19 @@ section {
   box-shadow: 0 0 0 3px #5175ff, 0 0 0 5px #fff;
   outline: none;
 }
+.button--submit {
+  background-color: #5175ff;
+  color: #fff;
+  width: 100%;
+}
+.button--submit:hover {
+  background-color: #829cff;
+  box-shadow: none;
+}
+.button--submit:focus {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #5175ff;
+  outline: none;
+}
 
 .card {
   display: flex;
@@ -336,6 +349,28 @@ section {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+.form__input {
+  font-size: 1.6rem;
+  padding: 0 16px 16px;
+  height: 45px;
+  border: none;
+  border-bottom: 1px solid rgba(116, 123, 149, 0.5);
+  cursor: pointer;
+}
+.form__input:hover {
+  border-bottom: 1px solid #5175ff;
+}
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #5175ff;
+}
+.form__input option {
+  font-weight: 700;
+  color: #333950;
+}
+.form__input option span {
+  opacity: 0.4;
 }
 
 .logo {
@@ -568,5 +603,7 @@ section {
   position: absolute;
   width: 2036px;
   height: 2036px;
+  top: -820px;
+  right: -790px;
   overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
