@@ -33,21 +33,16 @@
 
   & select {
     display: none;
-
-    // appearance: none;
-    // background-image: url(../assets/sign-up/icon-arrow-down.svg);
-    // background-repeat: no-repeat;
-    // background-position: 95% 38%;
   }
 
   &__select {
-    &--option {
-      font-weight: 700;
-      color: $neutral-800;
-      & span {
-        color: rgb(51, 57, 80, 0.4);
-      }
+    font-weight: 700;
+    color: $neutral-800;
+    & span {
+      color: rgb(51, 57, 80, 0.4);
+      padding-left: $spacing-125;
     }
+
     &::after {
       content: url(../assets/sign-up/icon-arrow-down.svg);
       //   background-image: url(../assets/sign-up/icon-arrow-down.svg);
@@ -57,6 +52,41 @@
       height: 50px;
       right: 0;
       top: 0;
+    }
+
+    &-dropdown {
+      position: absolute;
+      top: 102%;
+      width: 100%;
+      z-index: 2;
+
+      padding: $spacing-200;
+      border-radius: $radius-12;
+      margin-left: -$spacing-200;
+
+      background-color: $neutral-0;
+      box-shadow: 0px 15px 15px 10px #4b5c9a29;
+
+      display: flex;
+      flex-direction: column;
+
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: 0.6s ease;
+
+      &.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &--option {
+      padding: $spacing-100;
+
+      &:hover {
+        background-color: $blue-100;
+        border-radius: $radius-8;
+      }
     }
   }
 }
