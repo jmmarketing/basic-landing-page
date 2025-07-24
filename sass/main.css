@@ -133,20 +133,6 @@ section {
   transform: translateY(2.5vw);
 }
 
-@container main ( max-width: 720px) {
-  .hero__left {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-  .hero__right {
-    width: 53%;
-    max-width: 200px;
-  }
-}
 .button {
   width: 170px;
   height: 50px;
@@ -344,11 +330,17 @@ section {
   height: 489px;
   border-radius: 12px;
   padding: 40px;
+  margin-bottom: 120px;
   box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.1607843137);
   background-color: #fff;
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+@media only screen and (max-width: 48em) {
+  .form {
+    margin-top: -48px;
+  }
 }
 .form__input {
   font-size: 1.6rem;
@@ -399,7 +391,7 @@ section {
   display: flex;
   flex-direction: column;
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateY(-20px);
   transition: 0.6s ease;
 }
 .form__select-dropdown.show {
@@ -605,20 +597,32 @@ section {
     height: 1248px;
   }
 }
-
 @container main ( max-width: 720px) {
-  .hero {
+  .home-page .hero {
     display: flex;
     flex-direction: column-reverse;
     gap: 12px;
   }
+  .home-page .hero__left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .home-page .hero__right {
+    width: 53%;
+    max-width: 200px;
+  }
 }
+
 .signup {
   background-color: #fafafa;
 }
 .signup .main {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -647,4 +651,52 @@ section {
   top: -820px;
   right: -790px;
   overflow: hidden;
+}
+@media only screen and (max-width: 36.5em) {
+  .signup .accent__background {
+    transition: top 0.5s ease;
+    top: 880px !important;
+  }
+}
+@media only screen and (max-width: 26.5em) {
+  .signup .accent__background {
+    top: 970px !important;
+  }
+}
+@container main ( max-width: 900px) {
+  .signup .logo {
+    align-items: center;
+  }
+  .signup .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: -60px;
+  }
+  .signup .hero__left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .signup .hero__right {
+    width: 100%;
+  }
+  .signup .accent__background {
+    position: absolute;
+    right: 0;
+    top: 780px;
+    width: 100%;
+    height: 100%;
+  }
+  .signup .countdown {
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 80px;
+  }
+  .signup .upper-text {
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */
