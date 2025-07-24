@@ -366,22 +366,17 @@ section {
   outline: none;
   box-shadow: 0 0 0 3px #fff, 0 0 0 5px #5175ff;
 }
-.form__input option {
+.form select {
+  display: none;
+}
+.form__select--option {
   font-weight: 700;
   color: #333950;
 }
-.form__input option span {
+.form__select--option span {
   color: rgba(51, 57, 80, 0.4);
 }
-.form select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-image: url(../assets/sign-up/icon-arrow-down.svg);
-  background-repeat: no-repeat;
-  background-position: 95% 38%;
-}
-.form select::after {
+.form__select::after {
   content: url(../assets/sign-up/icon-arrow-down.svg);
   background-size: cover;
   position: absolute;
