@@ -4,7 +4,6 @@
 const select = document.querySelector(".form__select");
 const dropdown = document.querySelector(".form__select-dropdown");
 const option = document.querySelector(".form__select--option");
-const submitBtn = document.querySelector(".button--submit");
 
 document.addEventListener("click", (e) => {
   if (e.target == select) {
@@ -16,6 +15,16 @@ document.addEventListener("click", (e) => {
     select.innerHTML = e.target.innerHTML;
     console.dir(e.target);
   }
+});
+
+//Fomr Submit
+const form = document.querySelector("form");
+const submitBtn = document.querySelector(".button--submit");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  console.dir(form);
 });
 
 //Countdown Timer
