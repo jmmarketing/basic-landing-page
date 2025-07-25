@@ -330,7 +330,6 @@ section {
   height: 489px;
   border-radius: 12px;
   padding: 40px;
-  margin-bottom: 120px;
   box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.1607843137);
   background-color: #fff;
   display: flex;
@@ -388,7 +387,7 @@ section {
   margin-left: -16px;
   background-color: #fff;
   box-shadow: 0px 15px 15px 10px rgba(75, 92, 154, 0.1607843137);
-  display: flex;
+  display: none;
   flex-direction: column;
   opacity: 0;
   transform: translateY(-20px);
@@ -397,9 +396,15 @@ section {
 .form__select-dropdown.show {
   opacity: 1;
   transform: translateY(0);
+  display: flex;
 }
 .form__select--option {
+  font-weight: 700;
   padding: 8px;
+}
+.form__select--option span {
+  color: rgba(51, 57, 80, 0.4);
+  padding-left: 10px;
 }
 .form__select--option:hover {
   background-color: #e4eaff;
@@ -623,6 +628,7 @@ section {
 .signup .main {
   width: 100vw;
   height: 100%;
+  min-height: 980px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -694,6 +700,7 @@ section {
     flex-direction: column;
     gap: 12px;
     margin-top: -60px;
+    margin-bottom: 120px;
   }
   .signup .hero__left {
     display: flex;

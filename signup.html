@@ -35,19 +35,19 @@
               Coming <span class="blue">4 Nov 2025</span>
             </p>
             <div class="countdown__container">
-              <div class="countdown__timer-card" data-color="blue">
+              <div class="countdown__timer-card" data-color="blue" id="days">
                 <p class="heading">47</p>
                 <p class="label">days</p>
               </div>
-              <div class="countdown__timer-card" data-color="blue">
+              <div class="countdown__timer-card" data-color="blue" id="hours">
                 <p class="heading">07</p>
                 <p class="label">hours</p>
               </div>
-              <div class="countdown__timer-card" data-color="blue">
+              <div class="countdown__timer-card" data-color="blue" id="min">
                 <p class="heading">56</p>
                 <p class="label">min</p>
               </div>
-              <div class="countdown__timer-card" data-color="blue">
+              <div class="countdown__timer-card" data-color="blue" id="sec">
                 <p class="heading">14</p>
                 <p class="label">sec</p>
               </div>
@@ -76,16 +76,37 @@
               <option value="Ultimate">Ultimate Pack $19.99</option>
             </select>
 
-            <div class="form__input form__select" id="select-custom">
-              Basic Pack <span> Free</span>
-              <div class="form__select-dropdown">
-                <div class="form__select--option" data-value="Basic">
+            <div class="form__input" tabindex="0">
+              <div
+                class="form__select"
+                id="select-custom"
+                aria-controls="listbox"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                role="combobox"
+              >
+                Basic Pack <span> Free</span>
+              </div>
+              <div class="form__select-dropdown" role="listbox">
+                <div
+                  class="form__select--option"
+                  data-value="Basic"
+                  role="option"
+                >
                   Basic Pack <span> Free</span>
                 </div>
-                <div class="form__select--option" data-value="Pro">
+                <div
+                  class="form__select--option"
+                  data-value="Pro"
+                  role="option"
+                >
                   Pro Pack <span> $9.99</span>
                 </div>
-                <div class="form__select--option" data-value="Ultimate">
+                <div
+                  class="form__select--option"
+                  data-value="Ultimate"
+                  role="option"
+                >
                   Ultimate Pack <span> $19.99</span>
                 </div>
               </div>

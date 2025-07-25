@@ -4,6 +4,7 @@
   .main {
     width: 100vw;
     height: 100%;
+    min-height: 980px;
 
     display: flex;
     flex-direction: column;
@@ -85,6 +86,7 @@
       flex-direction: column;
       gap: $spacing-150;
       margin-top: -60px;
+      margin-bottom: 120px;
 
       &__left {
         display: flex;

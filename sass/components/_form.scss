@@ -5,7 +5,7 @@
 
   border-radius: $radius-12;
   padding: $spacing-500;
-  margin-bottom: 120px;
+  //   margin-bottom: 120px;
   box-shadow: 0px 50px 50px -25px #4b5c9a29;
 
   background-color: $neutral-0;
@@ -73,7 +73,7 @@
       background-color: $neutral-0;
       box-shadow: 0px 15px 15px 10px #4b5c9a29;
 
-      display: flex;
+      display: none;
       flex-direction: column;
 
       opacity: 0;
@@ -83,11 +83,18 @@
       &.show {
         opacity: 1;
         transform: translateY(0);
+        display: flex;
       }
     }
 
     &--option {
+      font-weight: 700;
       padding: $spacing-100;
+
+      & span {
+        color: rgb(51, 57, 80, 0.4);
+        padding-left: $spacing-125;
+      }
 
       &:hover {
         background-color: $blue-100;
