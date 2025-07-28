@@ -357,6 +357,15 @@ section {
   outline: none;
   box-shadow: 0 0 0 3px #fff, 0 0 0 5px #5175ff;
 }
+.form__input.pass::after {
+  content: url(../assets/sign-up/icon-check.svg);
+  background-size: cover;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 0;
+  top: 0;
+}
 .form select {
   display: none;
 }

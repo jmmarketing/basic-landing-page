@@ -20,6 +20,15 @@ document.addEventListener("click", (e) => {
 //Fomr Submit
 const form = document.querySelector("form");
 const submitBtn = document.querySelector(".button--submit");
+const nameInput = document.querySelector("#field_name");
+const emailInput = document.querySelector("#field_email");
+
+const requiredState = {
+  name: false,
+  email: false,
+};
+
+function checkInput() {}
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -48,10 +57,16 @@ function runCountdown() {
   const min = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
   const sec = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-  if (days !== daysCard.value) daysCard.textContent = days;
-  if (hours !== hoursCard.value) hoursCard.textContent = hours;
-  if (min !== minCard.value) minCard.textContent = min;
-  if (sec !== secCard.value) secCard.textContent = sec;
+  if (days !== daysCard.value)
+    daysCard.textContent = days < 10 ? "0" + days.toString() : days;
+  if (hours !== hoursCard.value)
+    hoursCard.textContent = hours < 10 ? "0" + hours.toString() : hours;
+  if (min !== minCard.value)
+    minCard.textContent = min < 10 ? "0" + min.toString() : min;
+  if (sec !== secCard.value)
+    secCard.textContent = sec < 10 ? "0" + sec.toString() : sec;
+
+  //   console.log(typeof sec);
 
   if (timeLeft < 0) clearInterval(timer);
 }
