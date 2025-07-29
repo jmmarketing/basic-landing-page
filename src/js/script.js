@@ -36,36 +36,37 @@ const requiredState = {
   email: false,
 };
 
+const validationRules = new Map([
+  [nameInput, { pattern: /^[A-Za-z\s]{3,}$/, stateKey: "name" }],
+  [
+    emailInput,
+    {
+      pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+      stateKey: "email",
+    },
+  ],
+]);
+
+function validateInputUpdateUI(input, pattern, stateProp) {
+  const inputVal = input.value;
+  const isValid = pattern.test(inputVal);
+
+  if (isValid) {
+    input.classList.add("pass");
+    input.classList.remove("fail");
+    requiredState[stateProp] = true;
+  } else {
+    input.classList.add("fail");
+    input.classList.remove("pass");
+    requiredState[stateProp] = false;
+  }
+}
+
 function checkInput(e) {
-  const inputVal = e.target.value;
-  const emailFormat = /^[a-zA-Z0–9._%+-]+@[a-zA-Z0–9.-]+\.[a-zA-Z]{2,}$/;
-  const nameFormat = /^[A-Za-z\s]{3,}$/;
-
-  console.log(inputVal);
-
-  if (e.target == nameInput) {
-    const validated = nameFormat.test(inputVal);
-    if (validated) {
-      nameInput.classList.add("pass");
-      requiredState.name = true;
-    } else {
-      nameInput.classList.add("fail");
-      requiredState.name = false;
-    }
-  }
-
-  if (e.target == emailInput) {
-    const validated = emailFormat.test(inputVal);
-    if (validated) {
-      emailInput.classList.add("pass");
-      requiredState.email = true;
-    } else {
-      emailInput.classList.add("fail");
-      requiredState.email = false;
-    }
-
-    console.log(requiredState);
-  }
+  const rule = validationRules.get(e.target);
+  console.log(validationRules);
+  console.log(rule);
+  if (rule) validateInputUpdateUI(e.target, rule.pattern, rule.stateKey);
 }
 
 [nameInput, emailInput].forEach((input) =>
@@ -74,8 +75,10 @@ function checkInput(e) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  const isValid = !Object.values(requiredState).includes(false);
+  console.log(isValid);
 
-  console.dir(form);
+  //   console.dir(form);
 });
 
 //#####################
