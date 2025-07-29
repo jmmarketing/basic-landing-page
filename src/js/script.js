@@ -1,6 +1,12 @@
 // Starting build out of from interaction & countdown logic.
 
+// ###############
+// ### FORM JS ###
+// ################
+
+// +++++++++++++
 //Form drop down
+//++++++++++++++
 const select = document.querySelector(".form__select");
 const dropdown = document.querySelector(".form__select-dropdown");
 const option = document.querySelector(".form__select--option");
@@ -17,7 +23,9 @@ document.addEventListener("click", (e) => {
   }
 });
 
-//Fomr Submit
+//++++++++++++++
+//Form Submit
+//++++++++++++++
 const form = document.querySelector("form");
 const submitBtn = document.querySelector(".button--submit");
 const nameInput = document.querySelector("#field_name");
@@ -28,7 +36,41 @@ const requiredState = {
   email: false,
 };
 
-function checkInput() {}
+function checkInput(e) {
+  const inputVal = e.target.value;
+  const emailFormat = /^[a-zA-Z0–9._%+-]+@[a-zA-Z0–9.-]+\.[a-zA-Z]{2,}$/;
+  const nameFormat = /^[A-Za-z\s]{3,}$/;
+
+  console.log(inputVal);
+
+  if (e.target == nameInput) {
+    const validated = nameFormat.test(inputVal);
+    if (validated) {
+      nameInput.classList.add("pass");
+      requiredState.name = true;
+    } else {
+      nameInput.classList.add("fail");
+      requiredState.name = false;
+    }
+  }
+
+  if (e.target == emailInput) {
+    const validated = emailFormat.test(inputVal);
+    if (validated) {
+      emailInput.classList.add("pass");
+      requiredState.email = true;
+    } else {
+      emailInput.classList.add("fail");
+      requiredState.email = false;
+    }
+
+    console.log(requiredState);
+  }
+}
+
+[nameInput, emailInput].forEach((input) =>
+  input.addEventListener("change", checkInput)
+);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -36,7 +78,9 @@ form.addEventListener("submit", (e) => {
   console.dir(form);
 });
 
+//#####################
 //Countdown Timer
+//####################
 const daysCard = document.querySelector("#days");
 const hoursCard = document.querySelector("#hours");
 const minCard = document.querySelector("#min");
