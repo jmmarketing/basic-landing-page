@@ -29,15 +29,17 @@ class SignupFormView {
 
   _init() {
     //Custom Select
-    document.addEventListener("click", this._customSelectUI.bind(this));
+    if (document.body.classList.contains("signup")) {
+      document.addEventListener("click", this._customSelectUI.bind(this));
 
-    //Input Validation
-    [this._nameInput, this._emailInput].forEach((input) =>
-      input.addEventListener("change", this._checkInput.bind(this))
-    );
+      //Input Validation
+      [this._nameInput, this._emailInput].forEach((input) =>
+        input.addEventListener("change", this._checkInput.bind(this))
+      );
 
-    //Submit Form
-    this._form.addEventListener("submit", this._submitForm.bind(this));
+      //Submit Form
+      this._form.addEventListener("submit", this._submitForm.bind(this));
+    }
   }
 
   _checkInput(e) {
