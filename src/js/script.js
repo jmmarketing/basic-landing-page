@@ -13,7 +13,7 @@ const option = document.querySelector(".form__select--option");
 
 document.addEventListener("click", (e) => {
   if (e.target == select) {
-    console.log("Select Clicked!");
+    // console.log("Select Clicked!");
     dropdown.classList.toggle("show");
   } else dropdown.classList.remove("show");
 
@@ -24,7 +24,7 @@ document.addEventListener("click", (e) => {
 });
 
 //++++++++++++++
-//Form Submit
+//Form Submit / Validaton
 //++++++++++++++
 const form = document.querySelector("form");
 const submitBtn = document.querySelector(".button--submit");
@@ -63,10 +63,9 @@ function validateInputUpdateUI(input, pattern, stateProp) {
 }
 
 function checkInput(e) {
-  const rule = validationRules.get(e.target);
-  console.log(validationRules);
-  console.log(rule);
-  if (rule) validateInputUpdateUI(e.target, rule.pattern, rule.stateKey);
+  const target = e.target || e;
+  const rule = validationRules.get(target);
+  if (rule) validateInputUpdateUI(target, rule.pattern, rule.stateKey);
 }
 
 [nameInput, emailInput].forEach((input) =>
@@ -78,7 +77,20 @@ form.addEventListener("submit", (e) => {
   const isValid = !Object.values(requiredState).includes(false);
   console.log(isValid);
 
-  //   console.dir(form);
+  if (!isValid) {
+    //Catch Errors / Empty Input
+    [nameInput, emailInput].forEach((field) => checkInput(field));
+    return;
+  }
+
+  // Continue with submission (Does not send anywhere currently)
+  const data = new FormData(form, submitBtn);
+  const dataObj = Object.fromEntries(data.entries());
+  console.log(dataObj);
+  document.querySelectorAll("input").forEach((input) => {
+    input.value = "";
+    input.classList.remove("pass");
+  });
 });
 
 //#####################
