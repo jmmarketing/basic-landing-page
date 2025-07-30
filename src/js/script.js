@@ -1,4 +1,42 @@
 // Starting build out of from interaction & countdown logic.
+//#####################
+//Countdown Timer
+//####################
+const daysCard = document.querySelector("#days");
+const hoursCard = document.querySelector("#hours");
+const minCard = document.querySelector("#min");
+const secCard = document.querySelector("#sec");
+
+const endDate = new Date("2025-11-04T00:00:00");
+
+const timer = setInterval(runCountdown, 1000);
+
+function runCountdown() {
+  const today = new Date();
+  const timeLeft = endDate - today;
+
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const min = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const sec = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  if (days !== daysCard.value)
+    daysCard.textContent = days < 10 ? "0" + days.toString() : days;
+  if (hours !== hoursCard.value)
+    hoursCard.textContent = hours < 10 ? "0" + hours.toString() : hours;
+  if (min !== minCard.value)
+    minCard.textContent = min < 10 ? "0" + min.toString() : min;
+  if (sec !== secCard.value)
+    secCard.textContent = sec < 10 ? "0" + sec.toString() : sec;
+
+  //   console.log(typeof sec);
+
+  if (timeLeft < 0) clearInterval(timer);
+}
+
+// setInterval(runCountdown, 1000);
 
 // ###############
 // ### FORM JS ###
@@ -92,42 +130,3 @@ form.addEventListener("submit", (e) => {
     input.classList.remove("pass");
   });
 });
-
-//#####################
-//Countdown Timer
-//####################
-const daysCard = document.querySelector("#days");
-const hoursCard = document.querySelector("#hours");
-const minCard = document.querySelector("#min");
-const secCard = document.querySelector("#sec");
-
-const endDate = new Date("2025-11-04T00:00:00");
-
-const timer = setInterval(runCountdown, 1000);
-
-function runCountdown() {
-  const today = new Date();
-  const timeLeft = endDate - today;
-
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const min = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const sec = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-  if (days !== daysCard.value)
-    daysCard.textContent = days < 10 ? "0" + days.toString() : days;
-  if (hours !== hoursCard.value)
-    hoursCard.textContent = hours < 10 ? "0" + hours.toString() : hours;
-  if (min !== minCard.value)
-    minCard.textContent = min < 10 ? "0" + min.toString() : min;
-  if (sec !== secCard.value)
-    secCard.textContent = sec < 10 ? "0" + sec.toString() : sec;
-
-  //   console.log(typeof sec);
-
-  if (timeLeft < 0) clearInterval(timer);
-}
-
-// setInterval(runCountdown, 1000);
