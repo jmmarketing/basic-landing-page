@@ -1,5 +1,7 @@
 import countdownView from "./views/countdownView";
 import formView from "./views/formView";
+import homeView from "./views/homeView";
+import signupView from "./views/signupView";
 import router from "./router";
 
 import "core-js";
