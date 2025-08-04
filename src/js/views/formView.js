@@ -23,11 +23,11 @@ class SignupFormView {
     ],
   ]);
 
-  constructor() {
-    this._init();
-  }
+  // constructor() {
+  //   this._init();
+  // }
 
-  _init() {
+  _initListeners() {
     //Custom Select
     if (document.body.classList.contains("signup")) {
       document.addEventListener("click", this._customSelectUI.bind(this));
