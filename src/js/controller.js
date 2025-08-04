@@ -14,6 +14,7 @@ export function showSignup() {}
 function init() {
   countdownView._startTimer();
   formView._initListeners();
+  homeView._loadTemplate();
 }
 
 init();

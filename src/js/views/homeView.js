@@ -1,3 +1,5 @@
+import { homeTemplate, homeFooter } from "../../../templates/homeTemplate.js";
+
 class HomeView {
   constructor() {
     this.container = document.querySelector("main");
@@ -5,7 +7,10 @@ class HomeView {
 
   async render() {}
 
-  _loadTemplate(path) {}
+  _loadTemplate(path) {
+    const template = homeTemplate;
+    console.log(`Template file: ${template}`);
+  }
 }
 
 export default new HomeView();

@@ -1,3 +1,4 @@
+export const homeTemplate = `
 <section class="logo">
         <a href="/"
           ><img src="./assets/shared/logo.svg" alt="Officelite Logo"
@@ -108,6 +109,6 @@
           >
         </div>
       </section>
-    </main>
-    <footer class="footer"></footer>
-
+    
+`;
+export const homeFooter = `<footer class="footer"></footer>`;
