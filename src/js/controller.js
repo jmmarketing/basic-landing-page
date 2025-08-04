@@ -7,14 +7,36 @@ import router from "./router";
 import "core-js";
 import "regenerator-runtime/runtime";
 
-export function showHome() {}
+export async function showHome() {
+  document.body.className = "home-page";
 
-export function showSignup() {}
+  await homeView.render();
 
-function init() {
+  countdownView._startTimer();
+}
+
+export async function showSignup() {
+  document.body.className = "signup";
+
+  await signupView.render();
+
   countdownView._startTimer();
   formView._initListeners();
-  homeView._loadTemplate();
+}
+
+function setupGlobalNavigation() {
+  document.addEventListener("click", (e) => {
+    if (e.target.matches("[data-nav]")) {
+      e.preventDefault();
+      const path = e.target.getAttribute("data-nav");
+      router.navigateTo(path);
+    }
+  });
+}
+
+function init() {
+  router.init();
+  setupGlobalNavigation();
 }
 
 init();

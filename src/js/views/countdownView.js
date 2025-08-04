@@ -1,8 +1,10 @@
 class CountdownTimer {
-  _daysCard = document.querySelector("#days");
-  _hoursCard = document.querySelector("#hours");
-  _minCard = document.querySelector("#min");
-  _secCard = document.querySelector("#sec");
+  constructor() {
+    this._daysCard = document.querySelector("#days");
+    this._hoursCard = document.querySelector("#hours");
+    this._minCard = document.querySelector("#min");
+    this._secCard = document.querySelector("#sec");
+  }
 
   _endDate = new Date("2025-11-04T00:00:00");
   _timer;

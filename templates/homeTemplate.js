@@ -1,7 +1,11 @@
+import logo from "../assets/shared/logo.svg";
+import charts from "../assets/home/illustration-charts.svg";
+
 export const homeTemplate = `
-<section class="logo">
+    <main class="main">
+      <section class="logo">
         <a href="/"
-          ><img src="./assets/shared/logo.svg" alt="Officelite Logo"
+          ><img src="${logo}" alt="Officelite Logo"
         /></a>
       </section>
       <section class="hero">
@@ -20,7 +24,7 @@ export const homeTemplate = `
         </div>
         <div class="hero__right">
           <img
-            src="./assets/home/illustration-charts.svg"
+            src="${charts}"
             alt="Statistical charts image"
             class="hero__image"
           />
@@ -109,6 +113,6 @@ export const homeTemplate = `
           >
         </div>
       </section>
-    
+    </main>
 `;
 export const homeFooter = `<footer class="footer"></footer>`;

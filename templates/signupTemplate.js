@@ -1,25 +1,10 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+import logo from "../assets/shared/logo.svg";
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | Officelite coming soon site</title>
-    <link rel="stylesheet" href="./sass/main.css" />
-    <script src="./src/js/controller.js" type="module" defer></script>
-  </head>
-  <body class="signup">
-    <main class="main">
+export const signupTemplate = `
+<main class="main">
       <section class="logo">
         <a href="/"
-          ><img src="./assets/shared/logo.svg" alt="Officelite Logo"
+          ><img src="${logo}" alt="Officelite Logo"
         /></a>
       </section>
 
@@ -137,5 +122,4 @@
 
       <div class="accent__background"></div>
     </main>
-  </body>
-</html> -->
+`;
