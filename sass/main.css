@@ -101,6 +101,10 @@ section {
   }
 }
 
+a {
+  cursor: pointer;
+}
+
 .hero__left {
   display: flex;
   flex-direction: column;

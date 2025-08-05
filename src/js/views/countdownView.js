@@ -19,6 +19,13 @@ class CountdownTimer {
     this._timer = setInterval(this._runCountdown.bind(this), 1000);
   }
 
+  _destoryTimer() {
+    if (this._timer) {
+      clearInterval(this._timer);
+      this._timer = null;
+    }
+  }
+
   _runCountdown() {
     const today = new Date();
     const timeLeft = this._endDate - today;

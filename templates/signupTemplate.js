@@ -3,7 +3,7 @@ import logo from "../assets/shared/logo.svg";
 export const signupTemplate = `
 <main class="main">
       <section class="logo">
-        <a href="/"
+        <a data-nav="/"
           ><img src="${logo}" alt="Officelite Logo"
         /></a>
       </section>

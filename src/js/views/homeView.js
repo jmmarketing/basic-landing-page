@@ -10,16 +10,16 @@ class HomeView {
 
     this.container.innerHTML = template;
 
-    this._updateNavigationLinks();
+    // this._updateNavigationLinks();
   }
 
-  _updateNavigationLinks() {
-    const signupLinks = document.querySelectorAll('a[href*="signup"]');
-    signupLinks.forEach((link) => {
-      link.setAttribute("data-nav", "/signup");
-      link.removeAttribute("href");
-    });
-  }
+  //   _updateNavigationLinks() {
+  //     const signupLinks = document.querySelectorAll('a[href*="signup"]');
+  //     signupLinks.forEach((link) => {
+  //       link.setAttribute("data-nav", "/signup");
+  //       link.removeAttribute("href");
+  //     });
+  //   }
 }
 
 export default new HomeView();

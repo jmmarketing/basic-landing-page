@@ -8,6 +8,7 @@ import "core-js";
 import "regenerator-runtime/runtime";
 
 export async function showHome() {
+  countdownView._destoryTimer();
   document.body.className = "home-page";
 
   await homeView.render();
@@ -16,6 +17,7 @@ export async function showHome() {
 }
 
 export async function showSignup() {
+  countdownView._destoryTimer();
   document.body.className = "signup";
 
   await signupView.render();

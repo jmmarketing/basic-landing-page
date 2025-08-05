@@ -4,7 +4,7 @@ import charts from "../assets/home/illustration-charts.svg";
 export const homeTemplate = `
     <main class="main">
       <section class="logo">
-        <a href="/"
+        <a data-nav="/"
           ><img src="${logo}" alt="Officelite Logo"
         /></a>
       </section>
@@ -18,7 +18,7 @@ export const homeTemplate = `
             projects. Officelite is the new collaboration platform built with an
             intuitive interface to improve productivity.
           </p>
-          <a href="signup.html" class="href"
+          <a data-nav="/signup"
             ><button class="button button--blue">Get Started</button></a
           >
         </div>
@@ -43,7 +43,7 @@ export const homeTemplate = `
               <p>2 GB storage</p>
               <p>Great security and support</p>
             </div>
-            <a href="signup.html"
+            <a data-nav="/signup"
               ><button class="button button--light-blue">
                 Try for Free
               </button></a
@@ -61,7 +61,7 @@ export const homeTemplate = `
               <p>2 GB storage</p>
               <p>Great security and support</p>
             </div>
-            <a href="signup.html"
+            <a data-nav="/signup"
               ><button class="button button--white">Try for Free</button></a
             >
           </div>
@@ -77,7 +77,7 @@ export const homeTemplate = `
               <p>2 GB storage</p>
               <p>Great security and support</p>
             </div>
-            <a href="signup.html"
+            <a data-nav="/signup"
               ><button class="button button--light-blue">
                 Try for Free
               </button></a
@@ -106,7 +106,7 @@ export const homeTemplate = `
               <p class="label">sec</p>
             </div>
           </div>
-          <a href="signup.html"
+          <a data-nav="/signup"
             ><button class="button button--blue no-shadow">
               Get Started
             </button></a
