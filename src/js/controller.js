@@ -8,22 +8,30 @@ import "core-js";
 import "regenerator-runtime/runtime";
 
 export async function showHome() {
-  countdownView._destoryTimer();
-  document.body.className = "home-page";
+  try {
+    countdownView._destoryTimer();
+    document.body.className = "home-page";
 
-  await homeView.render();
+    await homeView.render();
 
-  countdownView._startTimer();
+    countdownView._startTimer();
+  } catch (error) {
+    console.error(`Failed to load page: ${error}`);
+  }
 }
 
 export async function showSignup() {
-  countdownView._destoryTimer();
-  document.body.className = "signup";
+  try {
+    countdownView._destoryTimer();
+    document.body.className = "signup";
 
-  await signupView.render();
+    await signupView.render();
 
-  countdownView._startTimer();
-  formView._initFormBehavior();
+    countdownView._startTimer();
+    formView._initFormBehavior();
+  } catch (error) {
+    console.error(`Failed to load page: ${error}`);
+  }
 }
 
 function setupGlobalNavigation() {

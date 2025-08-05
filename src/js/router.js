@@ -3,7 +3,7 @@ import * as controller from "./controller";
 
 class Router {
   constructor() {
-    this.router = new Navigo("/", { hash: false });
+    this.router = new Navigo("/", { hash: false, strategy: "ONE" });
     this._setupRoutes();
   }
 

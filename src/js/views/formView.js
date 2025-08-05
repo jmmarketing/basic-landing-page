@@ -15,6 +15,8 @@ class SignupFormView {
   _validationRules;
 
   _initFormBehavior() {
+    if (!document.querySelector("form")) return;
+
     this._setListeners();
     this._setValidationRules();
   }
@@ -29,17 +31,15 @@ class SignupFormView {
     this._emailInput = document.querySelector("#field_email");
 
     //Custom Select
-    if (document.body.classList.contains("signup")) {
-      document.addEventListener("click", this._customSelectUI.bind(this));
+    document.addEventListener("click", this._customSelectUI.bind(this));
 
-      //Input Validation
-      [this._nameInput, this._emailInput].forEach((input) =>
-        input.addEventListener("change", this._checkInput.bind(this))
-      );
+    //Input Validation
+    [this._nameInput, this._emailInput].forEach((input) =>
+      input.addEventListener("change", this._checkInput.bind(this))
+    );
 
-      //Submit Form
-      this._form.addEventListener("submit", this._submitForm.bind(this));
-    }
+    //Submit Form
+    this._form.addEventListener("submit", this._submitForm.bind(this));
   }
 
   _setValidationRules() {
