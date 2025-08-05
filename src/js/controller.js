@@ -21,14 +21,19 @@ export async function showSignup() {
   await signupView.render();
 
   countdownView._startTimer();
-  formView._initListeners();
+  formView._initFormBehavior();
 }
 
 function setupGlobalNavigation() {
   document.addEventListener("click", (e) => {
-    if (e.target.matches("[data-nav]")) {
+    if (
+      e.target.matches("[data-nav]") ||
+      e.target.parentElement.matches("[data-nav]")
+    ) {
       e.preventDefault();
-      const path = e.target.getAttribute("data-nav");
+      const path =
+        e.target.getAttribute("data-nav") ??
+        e.target.parentElement.getAttribute("data-nav");
       router.navigateTo(path);
     }
   });

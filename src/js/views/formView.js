@@ -1,33 +1,33 @@
 class SignupFormView {
-  _select = document.querySelector(".form__select");
-  _dropdown = document.querySelector(".form__select-dropdown");
-  _option = document.querySelector(".form__select--option");
-  _form = document.querySelector("form");
-  _submitBtn = document.querySelector(".button--submit");
-  _nameInput = document.querySelector("#field_name");
-  _emailInput = document.querySelector("#field_email");
+  _select;
+  _dropdown;
+  _option;
+  _form;
+  _submitBtn;
+  _nameInput;
+  _emailInput;
 
   _requiredState = {
     name: false,
     email: false,
   };
 
-  _validationRules = new Map([
-    [this._nameInput, { pattern: /^[A-Za-z\s]{3,}$/, stateKey: "name" }],
-    [
-      this._emailInput,
-      {
-        pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-        stateKey: "email",
-      },
-    ],
-  ]);
+  _validationRules;
 
-  // constructor() {
-  //   this._init();
-  // }
+  _initFormBehavior() {
+    this._setListeners();
+    this._setValidationRules();
+  }
 
-  _initListeners() {
+  _setListeners() {
+    this._select = document.querySelector(".form__select");
+    this._dropdown = document.querySelector(".form__select-dropdown");
+    this._option = document.querySelector(".form__select--option");
+    this._form = document.querySelector("form");
+    this._submitBtn = document.querySelector(".button--submit");
+    this._nameInput = document.querySelector("#field_name");
+    this._emailInput = document.querySelector("#field_email");
+
     //Custom Select
     if (document.body.classList.contains("signup")) {
       document.addEventListener("click", this._customSelectUI.bind(this));
@@ -42,9 +42,25 @@ class SignupFormView {
     }
   }
 
+  _setValidationRules() {
+    this._validationRules = new Map([
+      [this._nameInput, { pattern: /^[A-Za-z\s]{3,}$/, stateKey: "name" }],
+      [
+        this._emailInput,
+        {
+          pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+          stateKey: "email",
+        },
+      ],
+    ]);
+  }
+
   _checkInput(e) {
     const target = e.target || e;
     const rule = this._validationRules.get(target);
+    console.log(`target = ${target}`);
+    console.log(`rule = ${rule}`);
+
     if (rule) this._validateInputUpdateUI(target, rule.pattern, rule.stateKey);
   }
   _validateInputUpdateUI(input, pattern, stateProp) {
