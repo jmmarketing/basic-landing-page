@@ -1,5 +1,6 @@
 import logo from "../assets/shared/logo.svg";
 import charts from "../assets/home/illustration-charts.svg";
+import { buttonComponent } from "../src/components/button.js";
 
 export const homeTemplate = `
     <main class="main">
@@ -18,9 +19,7 @@ export const homeTemplate = `
             projects. Officelite is the new collaboration platform built with an
             intuitive interface to improve productivity.
           </p>
-          <a data-nav="/signup"
-            ><button class="button button--blue">Get Started</button></a
-          >
+          ${buttonComponent()}
         </div>
         <div class="hero__right">
           <img
