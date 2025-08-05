@@ -1,6 +1,7 @@
 import logo from "../assets/shared/logo.svg";
 import charts from "../assets/home/illustration-charts.svg";
 import { buttonComponent } from "../src/components/button.js";
+import { priceCardComponent } from "../src/components/priceCard.js";
 
 export const homeTemplate = `
     <main class="main">
@@ -31,57 +32,44 @@ export const homeTemplate = `
       </section>
       <section class="pricing">
         <div class="pricing__card-container">
-          <div class="card" data-color="white">
-            <div class="card__price">
-              <p class="title card__plan">Basic</p>
-              <h2 class="heading">Free</h2>
-              <p>Up to 5 users for free</p>
-            </div>
-            <div class="card__details">
-              <p>Basic documents collaboration</p>
-              <p>2 GB storage</p>
-              <p>Great security and support</p>
-            </div>
-            <a data-nav="/signup"
-              ><button class="button button--light-blue">
-                Try for Free
-              </button></a
-            >
-          </div>
+          ${priceCardComponent(
+            "white",
+            "Basic",
+            "Free",
+            "Up to 5 users for free",
+            [
+              "Basic documents collaboration",
+              "2 GB Stroage",
+              "Great security and support",
+            ],
+            { path: "/signup", color: "light-blue", text: "Try for Free" }
+          )}
+         
+
           <!--PLACE HOLDER -->
-          <div class="card" data-color="blue">
-            <div class="card__price">
-              <p class="title card__plan">Basic</p>
-              <h2 class="heading">Free</h2>
-              <p>Up to 5 users for free</p>
-            </div>
-            <div class="card__details">
-              <p>Basic documents collaboration</p>
-              <p>2 GB storage</p>
-              <p>Great security and support</p>
-            </div>
-            <a data-nav="/signup"
-              ><button class="button button--white">Try for Free</button></a
-            >
-          </div>
+          ${priceCardComponent(
+            "blue",
+            "Pro",
+            "$9.99",
+            "Per user, billed monthly",
+            [
+              "All essential integrations",
+              "5 GB Stroage",
+              "More control and insights",
+            ],
+            { path: "/signup", color: "white", text: "Try for Free" }
+          )}
+
           <!--PLACE HOLDER -->
-          <div class="card" data-color="white">
-            <div class="card__price">
-              <p class="title card__plan">Basic</p>
-              <h2 class="heading">Free</h2>
-              <p>Up to 5 users for free</p>
-            </div>
-            <div class="card__details">
-              <p>Basic documents collaboration</p>
-              <p>2 GB storage</p>
-              <p>Great security and support</p>
-            </div>
-            <a data-nav="/signup"
-              ><button class="button button--light-blue">
-                Try for Free
-              </button></a
-            >
-          </div>
+            ${priceCardComponent(
+              "white",
+              "Ultimate",
+              "$19.99",
+              "Per user, billed monthly",
+              ["Robust work management", "100 GB Stroage", "VIP Support"],
+              { path: "/signup", color: "light-blue", text: "Try for Free" }
+            )}
+
         </div>
         <div class="countdown">
           <p class="upper-text white">
@@ -105,11 +93,7 @@ export const homeTemplate = `
               <p class="label">sec</p>
             </div>
           </div>
-          <a data-nav="/signup"
-            ><button class="button button--blue no-shadow">
-              Get Started
-            </button></a
-          >
+          ${buttonComponent("/signup", "blue", "Get Started", false)}
         </div>
       </section>
     </main>
