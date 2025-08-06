@@ -14,18 +14,18 @@ export const priceCardComponent = (
 ) => `
 
  <div class="card" data-color="${color}">
-        <div class="card__price">
-              <p class="title card__plan">${plan}</p>
-              <h2 class="heading">${price}</h2>
-              <p>${users}</p>
-        </div>
+    <div class="card__price">
+         <p class="title card__plan">${plan}</p>
+         <h2 class="heading">${price}</h2>
+        <p>${users}</p>
+     </div>
         <div class="card__details">
         ${details.map((d) => `<p>${d}</p>`).join("")}
         </div>
-        ${buttonComponent(
-          buttonConfig.path,
-          buttonConfig.color,
-          buttonConfig.text
-        )}
+     ${buttonComponent(
+       buttonConfig.path,
+       buttonConfig.color,
+       buttonConfig.text
+     )}
 </div>
 `;

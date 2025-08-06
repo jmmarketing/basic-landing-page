@@ -2,14 +2,11 @@ import logo from "../assets/shared/logo.svg";
 import charts from "../assets/home/illustration-charts.svg";
 import { buttonComponent } from "../src/components/button.js";
 import { priceCardComponent } from "../src/components/priceCard.js";
+import { logoBarComponent } from "../src/components/logo.js";
 
 export const homeTemplate = `
     <main class="main">
-      <section class="logo">
-        <a data-nav="/"
-          ><img src="${logo}" alt="Officelite Logo"
-        /></a>
-      </section>
+     ${logoBarComponent(logo)}
       <section class="hero">
         <div class="hero__left">
           <h1 class="heading hero__title">

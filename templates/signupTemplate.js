@@ -1,12 +1,9 @@
 import logo from "../assets/shared/logo.svg";
+import { logoBarComponent } from "../src/components/logo";
 
 export const signupTemplate = `
 <main class="main">
-      <section class="logo">
-        <a data-nav="/"
-          ><img src="${logo}" alt="Officelite Logo"
-        /></a>
-      </section>
+      ${logoBarComponent(logo)}
 
       <section class="hero">
         <div class="hero__left">
