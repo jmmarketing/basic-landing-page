@@ -3,6 +3,7 @@ import charts from "../assets/home/illustration-charts.svg";
 import { buttonComponent } from "../src/components/button.js";
 import { priceCardComponent } from "../src/components/priceCard.js";
 import { logoBarComponent } from "../src/components/logo.js";
+import { countdownCardComponent } from "../src/components/countdownCard.js";
 
 export const homeTemplate = `
     <main class="main">
@@ -73,22 +74,12 @@ export const homeTemplate = `
             Coming <span class="blue">4 Nov 2025</span>
           </p>
           <div class="countdown__container">
-            <div class="countdown__timer-card">
-              <p class="heading" id="days">47</p>
-              <p class="label">days</p>
-            </div>
-            <div class="countdown__timer-card">
-              <p class="heading" id="hours">07</p>
-              <p class="label">hours</p>
-            </div>
-            <div class="countdown__timer-card">
-              <p class="heading" id="min">56</p>
-              <p class="label">min</p>
-            </div>
-            <div class="countdown__timer-card">
-              <p class="heading" id="sec">14</p>
-              <p class="label">sec</p>
-            </div>
+
+          ${countdownCardComponent({ label: "days", number: 0 })}
+          ${countdownCardComponent({ label: "hours", number: 0 })}
+          ${countdownCardComponent({ label: "min", number: 0 })}
+          ${countdownCardComponent({ label: "sec", number: 0 })}
+            
           </div>
           ${buttonComponent("/signup", "blue", "Get Started", false)}
         </div>

@@ -1,5 +1,6 @@
 import logo from "../assets/shared/logo.svg";
-import { logoBarComponent } from "../src/components/logo";
+import { logoBarComponent } from "../src/components/logo.js";
+import { countdownCardComponent } from "../src/components/countdownCard.js";
 
 export const signupTemplate = `
 <main class="main">
@@ -19,22 +20,26 @@ export const signupTemplate = `
               Coming <span class="blue">4 Nov 2025</span>
             </p>
             <div class="countdown__container">
-              <div class="countdown__timer-card" data-color="blue">
-                <p class="heading" id="days">47</p>
-                <p class="label">days</p>
-              </div>
-              <div class="countdown__timer-card" data-color="blue">
-                <p class="heading" id="hours">07</p>
-                <p class="label">hours</p>
-              </div>
-              <div class="countdown__timer-card" data-color="blue">
-                <p class="heading" id="min">56</p>
-                <p class="label">min</p>
-              </div>
-              <div class="countdown__timer-card" data-color="blue">
-                <p class="heading" id="sec">14</p>
-                <p class="label">sec</p>
-              </div>
+               ${countdownCardComponent({
+                 label: "days",
+                 number: 0,
+                 color: "blue",
+               })}
+                ${countdownCardComponent({
+                  label: "hours",
+                  number: 0,
+                  color: "blue",
+                })}
+                ${countdownCardComponent({
+                  label: "min",
+                  number: 0,
+                  color: "blue",
+                })}
+                ${countdownCardComponent({
+                  label: "sec",
+                  number: 0,
+                  color: "blue",
+                })}
             </div>
           </div>
         </div>
